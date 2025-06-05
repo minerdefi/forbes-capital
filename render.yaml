@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: forbes-capital
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn fc.wsgi:application --bind 0.0.0.0:$PORT"
+    plan: free
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: g-CKsUR3OXf9f-r2hAqCNNxkFDt1OmmI1TZasIHnMkiyjj2IkjaY8p-yymLTz2ZbHE8
+      - key: DEBUG
+        value: False
+      - key: ALLOWED_HOSTS
+        value: .onrender.com,localhost,127.0.0.1
+      - key: PYTHON_VERSION
+        value: 3.11.11
+
+databases:
+  - name: forbes-capital-db
+    plan: free
