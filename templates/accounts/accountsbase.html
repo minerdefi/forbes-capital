@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="">
+    <meta name="keywords"
+        content="">
+    <meta name="author" content="">
+    <title>FC | Signup</title><!-- Favicon icon-->
+    <link rel="icon" href="{% static 'images/fc3.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/fc3.png' %}" type="image/x-icon"><!-- Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&amp;display=swap"
+        rel="stylesheet"><!-- Flag icon css -->
+    <link rel="stylesheet" href="{% static 'admin/assets/css/vendors/flag-icon.css' %}"><!-- iconly-icon-->
+    <link rel="stylesheet" href="{% static 'admin/assets/css/iconly-icon.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/assets/css/bulk-style.css' %}"><!-- iconly-icon-->
+    {% comment %} <link rel="stylesheet" href="{% static 'admin/assets/css/themify.css' %}"><!--fontawesome--> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'admin/assets/css/fontawesome-min.css' %}"><!-- Whether Icon css-->
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/assets/css/vendors/weather-icons/weather-icons.min.css' %}">
+    <!-- App css -->
+   <link id="color" rel="stylesheet" href="{% static 'admin/assets/css/color-1.css' %}" media="screen"> 
+    <link rel="stylesheet" href="{% static 'admin/assets/css/style.css' %}"> 
+    <script defer src="{% static 'admin/assets/css/color-1.js' %}"></script>
+    <script defer src="{% static 'admin/assets/css/color-2.js' %}"></script> 
+    <script defer src="{% static 'admin/assets/css/color-3.js' %}"></script>
+    <script defer src="{% static 'admin/assets/css/color-4.js' %}"></script>
+    <script defer src="{% static 'admin/assets/css/color-5.js' %}"></script>
+    <script defer src="{% static 'admin/assets/css/color-6.js' %}"></script>
+    <script defer src="{% static 'admin/assets/css/style.js' %}"></script> 
+    <link href="{% static 'admin/assets/css/color-1.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/assets/css/color-2.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/assets/css/color-3.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/assets/css/color-4.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/assets/css/color-5.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/assets/css/color-6.css' %}" rel="stylesheet">  
+    <link href="{% static 'admin/assets/css/style.css' %}" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Text:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/8bfe423d4f.js" crossorigin="anonymous"></script>
+  
+  <!-- Tailwind CSS Links -->
+  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+ 
+</head>
+
+{% comment %} <body class="bg-white dark:bg-stone-900 text-gray-900 dark:text-gray-100 transition duration-500 overflow-x-hidden titillium-web-light"> {% endcomment %}
+  <body class="titillium-web-light">
+    <!-- tap on top starts-->
+    <div class="tap-top"><i class="iconly-Arrow-Up icli"></i></div>
+    <!-- tap on tap ends-->
+    <!-- loader-->
+    <div class="loader-wrapper">
+      <div class="loader"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper" id="pageWrapper"> 
+      <!-- Page header start -->
+      <header class="page-header row">
+        <div class="logo-wrapper d-flex bg-orange-600 align-items-center col-auto"><div class="flex items-center">
+          <a href="{% url 'home' %}" class="flex items-center">
+              <img src="{% static 'images/fc1.png' %}" alt="Logo" class="h-14 w-auto">
+          </a>
+      </div><a class="close-btn toggle-sidebar" href="javascript:void(0)">
+            <svg class="svg-color">
+              <use href="{% static 'admin/assets/svg/iconly-sprite.svg' %}#Category"></use>
+            </svg></a></div>
+        <div class="page-main-header nav-left col">
+          <div class="header-left">
+            <div class="tagline text-sm text-gray-500 text-right pr-4 titillium-web-light-italic">
+              <h6><span class="text-lg titillium-web-bold-italic ">Forbes Capital  </span><span class="text-primary"> .grow your investment wealth..... </span></h6>
+          </div>
+          </div>
+          <div class="nav-right">
+            <ul class="header-right"> 
+              
+             
+              <li>  <a class="dark-mode " href="javascript:void(0)">
+                  <svg>
+                    <use href="{% static 'admin/assets/svg/iconly-sprite.svg' %}#moondark"></use>
+                  </svg></a></li>
+
+             
+              <li><a class="full-screen " href="javascript:void(0)"> 
+                  <svg>
+                    <use href="{% static 'admin/assets/svg/iconly-sprite.svg' %}#scanfull"></use>
+                  </svg></a></li>
+             
+              {% comment %} <li class="cloud-design"><a class="cloud-mode">
+                  <svg class="climacon climacon_cloudDrizzle" id="cloudDrizzle" version="1.1" viewBox="15 15 70 70">
+                    <g class="climacon_iconWrap climacon_iconWrap-cloudDrizzle">
+                      <g class="climacon_wrapperComponent climacon_wrapperComponent-drizzle">
+                        <path class="climacon_component climacon_component-stroke climacon_component-stroke_drizzle climacon_component-stroke_drizzle-left" d="M42.001,53.644c1.104,0,2,0.896,2,2v3.998c0,1.105-0.896,2-2,2c-1.105,0-2.001-0.895-2.001-2v-3.998C40,54.538,40.896,53.644,42.001,53.644z"></path>
+                        <path class="climacon_component climacon_component-stroke climacon_component-stroke_drizzle climacon_component-stroke_drizzle-middle" d="M49.999,53.644c1.104,0,2,0.896,2,2v4c0,1.104-0.896,2-2,2s-1.998-0.896-1.998-2v-4C48.001,54.54,48.896,53.644,49.999,53.644z"></path>
+                        <path class="climacon_component climacon_component-stroke climacon_component-stroke_drizzle climacon_component-stroke_drizzle-right" d="M57.999,53.644c1.104,0,2,0.896,2,2v3.998c0,1.105-0.896,2-2,2c-1.105,0-2-0.895-2-2v-3.998C55.999,54.538,56.894,53.644,57.999,53.644z"></path>
+                      </g>
+                      <g class="climacon_wrapperComponent climacon_wrapperComponent-cloud">
+                        <path class="climacon_component climacon_component-stroke climacon_component-stroke_cloud" d="M63.999,64.944v-4.381c2.387-1.386,3.998-3.961,3.998-6.92c0-4.418-3.58-8-7.998-8c-1.603,0-3.084,0.481-4.334,1.291c-1.232-5.316-5.973-9.29-11.664-9.29c-6.628,0-11.999,5.372-11.999,12c0,3.549,1.55,6.729,3.998,8.926v4.914c-4.776-2.769-7.998-7.922-7.998-13.84c0-8.836,7.162-15.999,15.999-15.999c6.004,0,11.229,3.312,13.965,8.203c0.664-0.113,1.336-0.205,2.033-0.205c6.627,0,11.998,5.373,11.998,12C71.997,58.864,68.655,63.296,63.999,64.944z"></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <h3>15</h3></a></li> {% endcomment %}
+              <li class="profile-nav custom-dropdown">
+                <div class="user-wrap">
+                  <div class="user-img">
+                    {% if profile.profile_pic %}
+                        <img src="{{ profile.profile_pic.url }}" alt="user">
+                    {% else %}
+                        <img src="{% static 'images/default.png' %}" alt="default user">
+                    {% endif %}
+                </div>
+                  <div class="user-content">
+                    <h6>{{ profile.user.first_name }}  {{ profile.user.last_name }}</h6>
+                    <p class="mb-0">{{ profile.user.username }}<i class="fa-solid fa-chevron-down"></i></p>
+                  </div>
+                </div>
+                <div class="custom-menu overflow-hidden">
+                  <ul class="profile-body">
+                    <li class="d-flex"> 
+                      <svg class="svg-color">
+                        <use href="{% static 'admin/assets/svg/iconly-sprite.svg' %}#Profile"></use>
+                      </svg><a class="ms-2" href="{% url 'account_settings' %}">Account</a>
+                    </li>
+                    
+                    
+                    <li class="d-flex"> 
+                      <svg class="svg-color">
+                        <use href="{% static 'admin/assets/svg/iconly-sprite.svg' %}#Login"></use>
+                      </svg><a class="ms-2" href="{% url 'logout' %}">Log Out</a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <style>
+        .ctext{
+          color:gray;
+        }
+      </style>
+      <div class="page-body-wrapper">
+        <!-- Page sidebar start-->
+        <aside class="page-sidebar">
+          <div class="main-sidebar" id="main-sidebar">
+            <ul class="sidebar-menu" id="simple-bar">
+              <li class="pin-title sidebar-main-title">
+                <div>
+                  <h6 class="sidebar-title font-semibold text-lg">Menu</h6>
+                </div>
+              </li>
+              <li class="sidebar-list flex items-center ctext space-x-3 py-2">
+                <i class="fa-solid "></i>
+                <a href="{% url 'dashboard' %}" class="flex items-center space-x-3  ">
+                  <i class="fas fa-home text-xl"></i>
+                  <h6 class="font-semibold text-lg">Dashboard</h6>
+                </a>
+              </li>
+              <li class="sidebar-list flex items-center space-x-3 py-2">
+                <i class="fa-solid "></i>
+                <a href="{% url 'deposit' %}" class="flex items-center space-x-3 ">
+                  <i class="fas fa-coins text-xl"></i>
+                  <h6 class="font-semibold text-lg">Deposit</h6>
+                </a>
+              </li>
+              <li class="sidebar-list flex items-center space-x-3 py-2">
+                <i class="fa-solid "></i>
+                <a href="{% url 'withdrawal' %}" class="flex items-center space-x-3 ">
+                  <i class="fas fa-hand-holding-usd text-xl"></i>
+                  <h6 class="font-semibold text-lg">Withdrawal</h6>
+                </a>
+              </li>
+              <li class="sidebar-list flex items-center space-x-3 py-2">
+                <i class="fa-solid text-gray-700 dark:text-gray-300"></i>
+                <a href="{% url 'history' %}" class="flex items-center space-x-3">
+                  <i class="fas fa-history text-xl"></i>
+                  <h6 class="font-semibold text-lg">Transactions</h6>
+                </a>
+              </li>
+              <li class="sidebar-list flex items-center space-x-3 py-2">
+                <i class="fa-solid "></i>
+                <a href="{% url 'privacy' %}" class="flex items-center space-x-3 ">
+                  <i class="fas fa-shield-alt text-xl">   </i>
+                  <h6 class="font-semibold text-lg">Privacy</h6>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </aside>
+        <style>
+          #alert {
+              z-index: 1000; /* Ensure it's above most other elements */
+              opacity: 1;
+              transition: opacity 0.5s ease-in-out;
+          }
+          
+          #alert.fade-out {
+              opacity: 0;
+          }
+          
+      </style>
+        
+
+        <div class="page-body">
+
+          {% if messages %}
+    {% for message in messages %}
+        <div id="alert" class="fixed top-0 inset-x-0 px-4 py-3 bg-primary text-white text-center z-50 fade-in-down">
+            <p>{{ message }}</p>
+            <button id="close-btn" class="absolute right-4 top-2  text-white hover:text-gray-200">
+                &times;
+            </button>
+        </div>
+    {% endfor %}
+{% endif %}
+{% if not request.user.profile.transaction_pin %}
+<div class="alert" role="alert">
+    Click the button to create a Transaction PIN: <a href="{% url 'create_transaction_pin' %} " class="btn btn-primary">Create Transaction Pin</a>
+</div>
+{% endif %}
+            {% block content %}
+            {% endblock %}
+            
+        </div>
+        
+ <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 footer-copyright">
+                            <p class="mb-0">©2017-2024 Forbes Capital. All Rights Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                           
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div><!-- jquery-->
+
+    
+    <script src="{% static 'admin/assets/js/vendors/jquery/jquery.min.js' %}"></script><!-- bootstrap js-->
+    <script src="{% static 'admin/assets/js/vendors/bootstrap/dist/js/bootstrap.bundle.min.js' %}" defer=""></script>
+    <script src="{% static 'admin/assets/js/vendors/bootstrap/dist/js/popper.min.js' %}" defer=""></script><!--fontawesome-->
+    <script src="{% static 'admin/assets/js/vendors/font-awesome/fontawesome-min.js' %}"></script><!-- feather-->
+    <script src="{% static 'admin/assets/js/vendors/feather-icon/feather.min.js' %}"></script>
+    <script src="{% static 'admin/assets/js/vendors/feather-icon/custom-script.js' %}"></script><!-- sidebar -->
+    <script src="{% static 'admin/assets/js/sidebar.js' %}"></script><!-- height_equal-->
+    <script src="{% static 'admin/assets/js/height-equal.js' %}"></script><!-- config-->
+    <script src="{% static 'admin/assets/js/config.js' %}"></script><!-- apex-->
+    <script src="{% static 'admin/assets/js/chart/apex-chart/apex-chart.js' %}"></script>
+    <script src="{% static 'admin/assets/js/chart/apex-chart/stock-prices.js' %}"></script><!-- scrollbar-->
+    <script src="{% static 'admin/assets/js/scrollbar/simplebar.js' %}"></script>
+    <script src="{% static 'admin/assets/js/scrollbar/custom.js' %}"></script><!-- slick-->
+    <script src="{% static 'admin/assets/js/slick/slick.min.js' %}"></script>
+    <script src="{% static 'admin/assets/js/slick/slick.js' %}"></script><!-- data_table-->
+    <script src="{% static 'admin/assets/js/js-datatables/datatables/jquery.dataTables.min.js' %}"></script><!-- page_datatable-->
+    <script src="{% static 'admin/assets/js/js-datatables/datatables/datatable.custom.js' %}"></script><!-- page_datatable1-->
+    <script src="{% static 'admin/assets/js/js-datatables/datatables/datatable.custom1.js' %}"></script><!-- page_datatable-->
+    <script src="{% static 'admin/assets/js/datatable/datatables/datatable.custom.js' %}"></script><!-- theme_customizer-->
+    <script src="{% static 'admin/assets/js/theme-customizer/customizer.js' %}"></script><!-- tilt-->
+    <script src="{% static 'admin/assets/js/animation/tilt/tilt.jquery.js' %}"></script><!-- page_tilt-->
+    <script src="{% static 'admin/assets/js/animation/tilt/tilt-custom.js' %}"></script><!-- dashboard_1-->
+    <script src="{% static 'admin/assets/js/dashboard/dashboard_1.js' %}"></script><!-- custom script -->
+    <script src="{% static 'admin/assets/js/script.js' %}"></script>
+    <script src="{% static '/assets/js/chart/apex-chart/apex-chart.js' %}"></script>
+   
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const themeToggle = document.getElementById('theme-toggle');
+          const themeToggleIcon = document.getElementById('theme-toggle-icon');
+      
+          // Check the user's theme preference
+          if (localStorage.getItem('theme') === 'dark' || 
+              (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+              document.documentElement.classList.add('dark');
+              themeToggleIcon.classList.remove('fa-sun');
+              themeToggleIcon.classList.add('fa-moon');
+          } else {
+              document.documentElement.classList.remove('dark');
+              themeToggleIcon.classList.remove('fa-moon');
+              themeToggleIcon.classList.add('fa-sun');
+          }
+      
+          // Toggle theme on click
+          themeToggle.addEventListener('click', function() {
+              if (document.documentElement.classList.contains('dark')) {
+                  document.documentElement.classList.remove('dark');
+                  themeToggleIcon.classList.remove('fa-moon');
+                  themeToggleIcon.classList.add('fa-sun');
+                  localStorage.setItem('theme', 'light');
+              } else {
+                  document.documentElement.classList.add('dark');
+                  themeToggleIcon.classList.remove('fa-sun');
+                  themeToggleIcon.classList.add('fa-moon');
+                  localStorage.setItem('theme', 'dark');
+              }
+          });
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const alertBox = document.getElementById('alert');
+        const closeBtn = document.getElementById('close-btn');
+        
+        // Close the alert when the close button is clicked
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                alertBox.classList.add('fade-out');
+                setTimeout(() => alertBox.style.display = 'none', 500); // Adjust the timeout to match the fade-out transition
+            });
+        }
+    
+        // Automatically hide the alert after 5 seconds
+        setTimeout(function() {
+            if (alertBox) {
+                alertBox.classList.add('fade-out');
+                setTimeout(() => alertBox.style.display = 'none', 500); // Adjust the timeout to match the fade-out transition
+            }
+        }, 5000);
+    });
+    
+      </script>
+</body>
+
+</html>

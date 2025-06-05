@@ -1,0 +1,273 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}FC | Thesis{% endblock %}
+{% block content %}
+<article class=" mx-auto md:w-8/12 lg:w-7/12 p-10 ">
+    <div class="flex flex-col items-start">
+        <ul class="mb-4 opacity-100 transform-none">
+            <li><a href="#" class="text-base text-left text-lg  hover:text-base titillium-web-semibold">FEATURED</a></li>
+        </ul>
+        <h1 class="text-3xl font-bold opacity-100 transform-none dm-serif-text-regular">Crypto Mega Theses</h1>
+        <div class="flex items-center mt-2 opacity-100 transform-none">
+    <div class="flex items-center">
+        <div class="w-6 h-6 overflow-hidden rounded-full">
+            <img src="{% static 'images/kyle.avif' %}" alt="Kyle Samani" class="w-full h-full object-cover">
+        </div>
+        <span class="ml-2">Kyle Samani</span>
+    </div><br><br><br>
+    {% comment %} <div class="flex items-center text-gray-600 ml-auto">
+        April 24, 2019 | 16 minute read
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" class="w-4 h-4 ml-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path>
+        </svg>
+    </div> {% endcomment %}
+
+    
+</div>
+<div class="max-w-7xl mx-auto lg:text-xl titillium-web-light">
+    <h3 id="introduction" class="text-2xl lg:text-3xl font-bold mb-4 dm-serif-text-regular">Introduction</h3>
+    <p class="mb-4">
+      Open, distributed ledgers and permissionless, censorship-resistant, trust-minimized computation are going to reshape massive sectors of the global economy. This belief led us to found Forbes Capital in 2017, and after spending two years with entrepreneurs, business leaders, and investors in this space, we’ve developed more conviction in this thesis than ever before.
+    </p>
+    <p class="mb-4">
+      Over the last few years, the breadth of use cases within the crypto ecosystem has exploded. Given this breadth, it can be difficult to define the underlying macro theses when use cases span non-seizable assets, censorship-resistant prediction markets, peer-to-peer wireless networks, new online advertising systems, and jurisdiction-less enterprises.
+    </p>
+    <p class="mb-4">
+      The purpose of this essay is to define and articulate the three mega investment theses for crypto. We define mega investment theses as those in which the addressable market is measured in the trillions of 2019 USD.
+    </p>
+    <p class="mb-4">
+      We expect these theses to play out over a decade or longer and to generate the vast majority of our returns. In the rough order that we expect them to develop:
+    </p>
+    <ul class="list-disc list-inside ml-6 mb-4">
+      <li>Open finance. By making units of value—stocks, bonds, real estate, currencies, etc.—interoperable, programmable, and composable on open ledgers, capital markets will become more accessible and efficient. Just as the proliferation of capital markets over the last 100 years enabled staggering levels of wealth creation, open finance will make capital markets more efficient and accessible to everyone on the planet.</li>
+      <li>Web3. The Web3 vision is about empowering consumers to control their own data, as opposed to the status quo in which tech giants, credit bureaus, advertisers, healthcare providers, etc. hoard consumer data. As this paradigm shifts, incumbents will lose their primary competitive advantage—their data monopolies and <a href="http://mattturck.com/the-power-of-data-network-effects/" target="_blank" title="The Power of Network Effects" class="text-base ">associated network effects</a>—creating massive opportunities for new value creation.</li>
+      <li>Global, state-free money. In simple terms, one can think of this as digital gold. However, we find that the “digital gold” framing is too narrow and substantially understates the opportunity. Global, state-free money is a superset of digital gold in terms of breadth and use cases, and represents a <a href="#" target="_blank" title="$100 Trillion" class="text-base ">dramatically larger addressable market</a>.</li>
+    </ul>
+    
+    <h2 id="preface-trust" class="text-2xl lg:text-3xl font-bold mt-8 mb-4 dm-serif-text-regular">Preface: Trust</h2>
+    <p class="mb-4">
+      The common theme underlying these theses is reducing trust between transacting parties. The modern economy is built on compounding layers of trust. We trust tech giants, banks, insurance companies, the government, and more every minute of every day.
+    </p>
+    <p class="mb-4">
+      We trust so many institutions that we take for granted just how many layers of trust the economy is built on. When we’re born and raised with certain trust assumptions, we don’t even recognize them as assumptions anymore. Given global complexity, detecting abuses of trust is more difficult than ever before (e.g. Facebook + Cambridge Analytica, Marriott/Target hacks, Equifax hack, etc.).
+    </p>
+    <p class="mb-4">
+      For the first time in human history, using open networks bound by cryptography and free-market economics, we can incentivize specific human behaviors without creating new trust assumptions. This is a subtle but profound shift.
+    </p>
+    <p class="mb-4">
+      This is not to say that trust is intrinsically a bad thing. However, all risk is built on trust. By creating a world with fewer trust assumptions, we can reduce systemic risk, and create ultimately healthier and more productive economies and societies.
+    </p>
+    
+    <h2 id="thesis-open-finance" class="text-2xl lg:text-3xl font-bold mt-8 mb-4 dm-serif-text-regular">Thesis: Open Finance</h2>
+    <p class="mb-4">
+      The Open Finance thesis is sometimes referred to as decentralized finance, or DeFi. However, we prefer the term Open Finance, as the level of (de)centralization is not the basis of the investment thesis. Decentralization is simply a means to open finance.
+    </p>
+    <p class="mb-4">
+      Trust is the foundation on top of which all financial services are built.
+    </p>
+    <p class="mb-4">
+      Although large and mature capital markets are generally efficient today, they are still nowhere close to being universally accessible. This is true both in developed markets and in developing economies.
+    </p>
+    <p class="mb-4">
+      The key innovation enabling open finance is the modularization of financial primitives. By modularizing financial primitives, the open finance stack commoditizes trust such that no application has a unique trust advantage over any other.
+    </p>
+    <p class="mb-4">
+      Modularizing financial primitives is an abstract concept. What exactly does it mean to modularize financial primitives?
+    </p>
+    <p class="mb-4">
+      Over the last 24 months, a number of open finance protocols have launched. All of these protocols are modular, and are being used by higher-level applications (and often combined). None of these protocols market to end-customers, provide customer service, or deal with local laws. These protocols are just pieces of code that live on blockchains. This is comparable to how email is built on a suite of open protocols like SMTP, TCP/IP, and HTML/JS to render email in the browser.
+    </p>
+    <p class="mb-4">
+      For example, let’s consider <a href="https://www.blitzpredict.io/" target="_blank" title="Blitz Predict" class="text-base ">BlitzPredict</a> (BP). BP is an exchange focused on sports betting built on top of the <a href="https://www.augur.net/" target="_blank" title="Augur" class="text-base ">Augur</a>, <a href="https://0x.org/" target="_blank" title="0x" class="text-base ">0x</a>, and (in the near future) <a href="https://makerdao.com/" target="_blank" title="Maker Dao" class="text-base ">Maker</a> protocols. BP relies on the Augur protocol as a means to create different kinds of markets, create shares in those outcomes, and ultimately resolve markets. BP relies on the 0x protocol to trade shares between users. And BP will soon rely on the Maker protocol for its collateralized stablecoin, DAI, to denominate trades. Each of these protocols function independently. Because they are modular, a higher-level application like BP can combine the underlying financial primitives to produce a trust-minimized user experience that was never before possible.
+    </p>
+    <div class="my-6 p-10">
+      <img alt="open finance" src="//images.ctfassets.net/qtbqvna1l0yq/65LciGuAo6MiHeh3MO8dZE/d3673eeec21c840cf93818b3c1e7559d/open_finance.png" class="mx-auto max-w-full h-auto">
+    </div>
+    <p class="mb-4">
+      Just as the cloud commoditized server deployments, enabling a step-function improvement in the rate of innovation in large-scale web applications, modularizing financial primitives will enable a step-function improvement in the rate of innovation in all financial services.
+    </p>
+    <p class="mb-4">
+      Because Open Finance is…open, anyone will be able to build local businesses on top of open finance protocols. This is how open finance will enable the un- and under-banked to access financial services. Protocols will not serve consumers. Businesses that navigate local regulations, and provide localized customer service, will serve consumers instead.
+    </p>
+    <p class="mb-4">
+      A great example of this is the <a href="#" target="_blank" title="UMA Project" class="text-base ">UMA protocol</a>. UMA protocol is a platform that enables two parties to enter into a contract for difference (CFD) that constantly and automatically rebalances as the price of the underlying asset moves in real time. The first product built on the UMA protocol was <a href="https://medium.com/uma-project/announcing-us-stock-index-token-powered-by-uma-and-dai-c394586c575a" target="_blank" title="Announcing the US Stock Index Token" class="text-base ">the US Stock Index Token</a> which provides a synthetic exposure to US stock indexes. The team at UMA is not serving retail customers. Instead, they are providing a tool for developers to use to create new products. At the end of the day, users of this synthetic stock index token are not transacting with UMA; they’re transacting with a company that integrates with UMA’s protocol.
+    </p>
+    <p class="mb-4">
+      Similar to how TCP/IP is not “TCP/IP” but rather a tool used to build applications, open finance primitives are not the “thing” themselves, but rather a means to build new financial applications.
+    </p>
+    <p class="mb-4">
+      Over the next decade, the fundamental value of open finance will be its ability to create a new class of financial applications that have the following properties:
+    </p>
+    <p class="mb-4"> 
+      Instead, market makers around the world are providing liquidity and hedging out their risk on the traditional capital markets, allowing anyone in the world to get exposure to the S&P 500 without paying any fees (UMA takes no fees), without going through any intermediaries, and without taking on any counterparty risk (the UMA smart contract acts as a trust-minimized escrow agent for the collateral that each party posts). As the 4 - 5B who are un- and under-banked around the world gain access to digital money, they’re naturally going to want to invest in assets that they don’t have access to. The rules that govern the U.S. equity markets make it challenging for this subset of individuals to get the access they want. However, using protocols like UMA, global financial inclusion will become possible for the first time in human history.
+    </p>
+    <p class "mb-4">
+      We cannot overstate the magnitude of this breakthrough. For the first time, financial markets can be global, permissionless, and for many kinds of derivative contracts, free of counterparty risk. This was impossible until recently.
+    </p>
+    <p class "mb-4">
+      The world’s financial market infrastructure will move to the Open Finance stack because the Open Finance stack enables millions of businesses—those that are local, national, and international in scale—to offer trust-minimized financial products to the people and businesses who need them most. Unlike legacy financial institutions, the next generation of crypto-native businesses won’t need to be trustworthy, nor will they need to build any new or particularly novel technology. The open finance stack will commoditize the financial primitives on top of which all transactions occur, enabling truly fluid capital flow across asset classes and jurisdictions. As these crypto-native businesses flourish, incumbents will be forced to switch to the Open Finance stack as well.
+    </p>
+   <p class="mb-4">
+    Open finance is not theoretical. It is happening now, and we expect this mega trend to compound over the next decade. In the last 18 months, the amount of capital locked in open finance smart contracts has grown from $0 to over <a href="#" target="_blank" title="UMA Project" class="text-base "> $400M</a>.
+   </p> 
+   <div class="my-6 p-10">
+    <img alt="open finance" src="{% static 'images/eth_in_open_finance.png' %}" class="mx-auto max-w-full h-auto">
+  </div>
+  <p class="my-4">
+    We’ve been evaluating and investing in open finance protocols and companies since the inception of the fund in 2017. Examples include protocols like Augur, Maker, and 0x and companies building on these protocols such as Dharma, BlitzPredict, and Radar Relay (note: these are illustrative examples. Forbes Capital is not necessarily invested in all of them).
+  </p>
+  <h2 id="thesis-open-finance" class="text-2xl md:2xl lg:text-3xl font-bold mt-8 mb-4 dm-serif-text-regular">Thesis: Web3</h2> 
+
+  <p class="mb-4">
+    Analogous to how Open Finance is predicated on the modularization of financial primitives, Web3 is based on unbundling of data ownership and application logic. Historically, Web2 applications bundled data storage and application logic. The paradigmatic shift in Web3 is the unbundling of data and application logic. By unbundling what was previously bundled, data owners won’t need to trust application providers with their data.
+  </p>
+
+  <p class="mb-4">
+    Chris Dixon of a16z Crypto laid out the Web3 thesis in Why Decentralization Matters. Dixon argues that centralized platforms like Google and Facebook, because of their fiduciary obligations to shareholders, inherently transition from providing value to extracting value from their respective ecosystems, as shown below:
+  </p>
+
+  <div class="my-6 p-10">
+    <img alt="cooperate compete" src="{% static 'images/cooperate_compete.png' %}" class="mx-auto max-w-full h-auto">
+  </div>
+
+  <p class="mb-4">
+    Building on Dixon’s essay, we’ll define Web3 more specifically: Web3 is about self-sovereign ownership and control of data. This is a corollary to Dixon’s characterisation of decentralization of networks: If networks become decentralized, there will not be a central server that owns and controls user data; instead, users will own and control their own data.
+  </p>
+
+  <p class="mb-4">
+    The high-level architectural differences between Web2 and Web3 are clear: In the Web2 model, companies control closed databases and own—both technically and legally—user data. In the Web3 model, users own their own encrypted data on architecturally open networks like the Interplanetary Filesystem (IPFS), and interact with one another using cryptographically signed messages on smart contract platforms that act as open, programmable ledgers.
+  </p>
+
+  <p class="mb-4">
+    Today, internet monopolies use consumer data against the best interest of their users (e.g. unauthorized sharing and selling of user data or pervasive web surveillance). Furthermore, data monopolies prevent innovation by limiting the types of applications that can be built on top of these valuable datasets.
+  </p>
+  <p class="mb-4">
+    When users own their own data, data monopologies will crumble. The second and third order effects of this will create massive new opportunities. In the same way that no one could accurately forecast the compounding rate of software innovation built on top of operating systems in the 1980s, or the emergence of web applications composed of dozens of cloud services in 2009, breaking down data silos will empower the greatest developer coopetition (when competitors cooperate) the world has ever seen. About a year ago, we described what developer coopetition could look like (albeit in a rather rudimentary way) in the context of social media applications.
+  </p>
+  <p class="mb-4">
+    It’s hard to imagine how a set of companies built on the Web3 stack will displace incumbents with data monopolies built on the Web2 stack. Perhaps the most salient argument against Web3 is “Consumers don’t care about privacy or data ownership.”
+  </p>
+  <p class="mb-4">
+   We agree. Consumers will not switch to Web3-based alternatives for ideological reasons. They will switch for utilitarian reasons.
+  </p>
+  <p class="mb-4">
+    As the Web3 stack matures, developers and entrepreneurs will explicitly choose to build applications on the Web3 stack instead of on the Web2 stack. Why? Because entrepreneurs have learned not to trust Web2 monopolies. As Dixon noted in Why Dentralization Matters: “Over time, the best entrepreneurs, developers, and investors have become wary of building on top of centralized platforms. We now have decades of evidence that doing so will end in disappointment.“
+  </p>
+  <p class="mb-4">
+    Thousands of companies from Yelp to Zynga to Buzzfeed have come to realize that Web2 monopolies are not trustworthy platform providers. And so developers and entrepreneurs will build on the Web3 stack, and find ways to deliver better products and services to consumers.
+  </p>
+
+  <div class="my-6 p-10">
+    <img alt="Zynga" src="{% static 'images/Zynga.png' %}" class="mx-auto max-w-full h-auto">
+  </div>
+  <p class="mb-4">
+    Let’s consider the Tari protocol. The Tari protocol is hyper-focused on digital asset issuance, and is starting off by targeting tickets for concerts and other live events. The Tari team realized there was an opportunity to rethink digital asset issuance and ticketing to solve the two biggest problems in the industry: ticket fraud and scalpers.
+  </p>
+  <p class="mb-4">
+    Tari was founded by Naveen Jain, Dan Teree, and Riccardo Spagni. Naveen previously ran technology for artists like Linkin Park, Bon Jovi, Lil Wayne, and Carrie Underwood; Dan previously founded Ticketfly, which Pandora acquired for $450M; and Riccardo is the lead maintainer of Monero, which is one of the oldest and most valuable cryptocurrencies.
+  </p>
+  <p class="mb-4">
+    Entrepreneurs of this caliber know that Web2 monopolies like TicketMaster cannot be trusted. They will never build on top of TicketMaster. Instead, they choose to build on the Web3 stack.
+  </p>
+  <p class="mb-4">
+    The Web3 vision is extremely ambitious in scope. Until the birth of Ethereum, no one was building software that supported self-sovereign user data. Building a trust-minimized technology stack that rivals the performance and scale of Web2 is a massive undertaking. Today, there are hundreds of teams all over the world building the Web3 stack to support trust-minimized computation over self-sovereign data.
+  </p>
+  <p class="mb-4">
+    The Web3 stack is still young. However, we can already see the first glimpses of it in action, and we’re investing in protocols and companies that are focusing on specific applications like Tari, and those that are building core infrastructure for this new technology stack. We’ve invested in The Graph, Keep, Livepeer, SKALE, Spring Labs, StarkWare, and Textile, each of which is providing critical infrastructure in the Web3 stack.
+  </p>
+  <h2 id="thesis-open-finance" class="text-xl md:2xl lg:text-2xl font-bold mt-8 mb-4 dm-serif-text-regular">Thesis: Global State-Free Money</h2> 
+
+  <p class="mb-4">
+    Because fiat money is bound by trust in human institutions rather than physics, we have to place immense trust in the human institutions that govern money.
+  </p>
+  <p class="mb-4">
+    There is a massive opportunity for a trust-minimized money. A natively digital, bearer asset bound by physics, math, and free-market economics rather than human institutions. That money will be the global, state-free measure of value, i.e. money.
+  </p>
+  <p class="mb-4">
+    The simplest way to think about the opportunity for a global, state-free money is digital gold. While this framing is not wrong, it dramatically understates the opportunity.
+  </p>
+  <p class="mb-4"> 
+    It’s clear how modern layer 1 blockchain tokens such as Bitcoin are superior to gold: Digital assets are infinitely divisible and globally transportable, and their supply schedules are 100% auditable and transparent. Because of these attributes, the opportunity for a state-free money far exceeds that of gold. We’ve argued that the addressable market for this state-free money is $100 trillion while that of gold is $7-8 trillion. A recap of the arguments we’ve previously laid out:
+  </p>
+  <p class="mb-4">
+    1) State-free money expands the market for gold in the same way that Uber expanded the market for taxis. The very people who most need inflation-resistant money—the 500M people who live in countries with more than 10% annual inflation—cannot physically store their wealth in gold, and generally do not have access to capital markets such that they can purchase claims on gold in a vault.
+  </p>
+  <div class="my-6 p-10">
+    <img alt="Global State Free Money.png" src="{% static 'images/global_state_free_money.png' %}" class="mx-auto max-w-full h-auto">
+  </div>
+  <p class="mb-4">
+    2) Counterintuitively, the super-wealthy want seizure-resistant assets even more than the people who live in hyper-inflationary countries. Their top priority is not to lose their wealth, and cryptocurrencies act as a “Swiss bank account in your head.” There are an estimated $20-30 trillion stashed in offshore bank accounts around the world.
+  </p>
+  <p class="mb-4">
+    3) Unlike gold—which offers no organic yield—blockchain-based monies guarantee perpetual, positive, risk-free rates (via staking in proof-of-stake networks, and via liquidity routing in payment channel networks on top of proof-of-work networks). Many investors such as Warren Buffet refuse to invest in precious metals because they do not generate yield. Similarly, many large institutional investors and funds only invest in stocks that pay a dividend, therefore excluding companies like Amazon. Because digital monies offer native risk-free rates, tremendous amounts of net new capital will invest in digital monies that is unable to invest in gold today.
+  </p>
+  <p class="mb-4">
+    4) New economic activity: The Open Finance and Web3 ecosystems will unlock trillions of dollars of economic activity on blockchains. We should expect that at least some of this will flow into the native tokens that power these blockchains.
+  </p>
+  <p class="mb-4">
+    With a general understanding of the opportunity for a state-free money, the obvious question is: What money or monies will it be? Given the network effects of money, we believe that there will be natural long-term convergence toward a single state-free money.
+  </p>
+  <p class="mb-4">
+    And that money is unlikely to be Bitcoin.
+  </p>
+  <p class="mb-4">
+    There are three major hypotheses that describe the path by which some asset can become the global, state-free money.
+  </p>
+  <p class="mb-4">
+   The first is the SOV hypothesis, which argues that the only property of money that matters (beyond basic security and usability) is its monetary policy, and therefore that the least inflationary money must win. This view is mostly strongly espoused by Bitcoin maximalists.
+  </p>
+  <p class="mb-4">
+    The second is the utility hypothesis, which argues that the money that’s most used as money will become the global, state-free money. Advocates of this hypothesis also recognize the need for a predictable and credible monetary policy. However, they don’t necessarily prioritize it as the sole variable that will dictate which native blockchain token will become the global, state-free money. This view is most strongly espoused by people building in and on smart contract platforms, as these platforms are the most likely to produce the most utility by powering the Open Finance and Web3 ecosystems.
+  </p>
+  <p class="mb-4">
+    The third is the stablecoin hypothesis, which argues that price stability is necessary for a money to be adopted. However, stablecoins are subject to intrinsic trade-offs, and we find it extremely unlikely that any algorithmic stablecoin will survive the test of time because of the impossibility trinity.
+  </p>
+  <p class="mb-4">
+    We believe the utility hypothesis is the most likely to produce the most valuable money—that the money that people use as money in a wide array of applications will become the global, state-free money—and as such, we invest a plurality of our time and energy in smart contract platforms and the infrastructure necessary to help them fulfill the Open Finance and Web3 visions. While Ethereum is currently the market leader on this front, we do not take it for granted that Ethereum will win, and instead manage our portfolio probabilistically.
+  </p>
+  <h2 id="Conclusion" class="text-2xl md:2xl lg:text-3xl font-bold mt-8 mb-4 dm-serif-text-regular">Conclusion</h2> 
+  <p class="mb-4">
+    The economy is a beautifully complex machine. That it works at such incredible scale is a testament to the power of trust that underlies our human institutions.
+  </p>
+  <p class="mb-4">
+  While the economy and society are based on an immense amount of trust, trust is not perfect. Humans fail. And therefore human institutions fail. Failures can compound, creating cascading failures and systemic risk.
+  </p>
+  <p class="mb-4">
+    Facilitated by open networks built on free-market assumptions and bounded by cryptography, humans can, for the first time in history, coordinate on a large scale without introducing any trusted intermediaries potentially prone to abusing that trust. Now that this is possible, we can revisit all of our preconceived trust assumptions throughout many sectors in the economy, and create incredible amounts of economic value.
+  </p>
+  <p class="mb-4">
+   The transition from a trust-based economy to one of self-sovereignty will be behind one of the largest wealth transfers in human history.
+  </p>
+  <p class="mb-4">
+    Trust is the foundation of all economic relationships. The greatest investment opportunity of our lifetimes is betting that it doesn’t have to be.
+  </p>
+
+  <p class="mb-4 titillium-web-extralight-italic">
+  Forbes Capital's investment thesis, the "Crypto Mega Theses," was first presented at the Spring 2019 Forbes Capital Summit.
+  </p>
+
+  <hr class="my-6 border-t  border-gray-300 dark:border-gray-700">
+  <div class="sm:text-sm md:text-sm lg:text-sm">
+  <p class="mb-2 titillium-web-extralight-italic">
+   <b class="titillium-web-semibold">Disclosure:</b> Unless otherwise indicated, the views expressed in this post are solely those of the author(s) in their individual capacity and are not the views of Forbes Capital Capital Management, LLC or its affiliates (together with its affiliates, “Forbes Capital”). Certain information contained herein may have been obtained from third-party sources, including from portfolio companies of funds managed by Forbes Capital. Forbes Capital believes that the information provided is reliable but has not independently verified the non-material information and makes no representations about the enduring accuracy of the information or its appropriateness for a given situation. This post may contain links to third-party websites (“External Websites”). The existence of any such link does not constitute an endorsement of such websites, the content of the websites, or the operators of the websites. These links are provided solely as a convenience to you and not as an endorsement by us of the content on such External Websites. The content of such External Websites is developed and provided by others and Forbes Capital takes no responsibility for any content therein. Charts and graphs provided within are for informational purposes solely and should not be relied upon when making any investment decision. Any projections, estimates, forecasts, targets, prospects, and/or opinions expressed in this blog are subject to change without notice and may differ or be contrary to opinions expressed by others.
+  </p>
+  <p class="mb-2 titillium-web-extralight-italic">
+    The content is provided for informational purposes only, and should not be relied upon as the basis for an investment decision, and is not, and should not be assumed to be, complete. The contents herein are not to be construed as legal, business, or tax advice. You should consult your own advisors for those matters. References to any securities or digital assets are for illustrative purposes only, and do not constitute an investment recommendation or offer to provide investment advisory services. Any investments or portfolio companies mentioned, referred to, or described are not representative of all investments in vehicles managed by Forbes Capital, and there can be no assurance that the investments will be profitable or that other investments made in the future will have similar characteristics or results. A list of investments made by funds managed by Forbes Capital is available here: <span class="text-base">https://forbespartners.org/main/portfolio/</span>. Excluded from this list are investments that have not yet been announced (1) for strategic reasons (e.g., undisclosed positions in publicly traded digital assets) or (2) due to coordination with the development team or issuer on the timing and nature of public disclosure. * This blog does not constitute investment advice or an offer to sell or a solicitation of an offer to purchase any limited partner interests in any investment vehicle managed by Forbes Capital. An offer or solicitation of an investment in any Forbes Capital investment vehicle will only be made pursuant to an offering memorandum, limited partnership agreement and subscription documents, and only the information in such documents should be relied upon when making a decision to invest.*
+  </p>
+  <p class="mb-2 titillium-web-extralight-italic">
+    Past performance does not guarantee future results. There can be no guarantee that any Forbes Capital investment vehicle’s investment objectives will be achieved, and the investment results may vary substantially from year to year or even from month to month. As a result, an investor could lose all or a substantial amount of its investment. Investments or products referenced in this blog may not be suitable for you or any other party.
+  </p>
+  <p class="mb-2 titillium-web-extralight-italic">
+    Forbes Capital has established, maintains and enforces written policies and procedures reasonably designed to identify and effectively manage conflicts of interest related to its investment activities. For more important disclosures, please see the Disclosures and Terms of Use available at <span class="text-base">https://forbespartners.org/main/disclosures</span> and <span class="text-base">https://forbespartners.org/main/terms</span>.
+  </p>
+  <div>
+
+  </div>
+  
+
+  </div>
+    
+</article>
+
+
+{% endblock %}

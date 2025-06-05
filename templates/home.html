@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="py-20 hero">
+  <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-700 dark:text-gray-300 mb-4 hero-title dm-serif-text-regular">
+          Forbes Capital
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl mb-8 dm-serif-text-regular hero-text">
+          We’re thesis driven investors that make long-term, high-conviction investments in category defining crypto companies and protocols across public and private markets.
+      </p><br><br>
+      <a href="#" class="hover:bg-orange-600 hover:text-gray-100 border-2 hover:border-orange-600 border-gray-500 font-bold py-6 px-10 mt-10 hero-button">
+        Let's Talk
+    </a>
+  </div>
+</div>
+
+
+<div class="py-8 px-4 mx-4 md:mx-8 lg:mx-16 dark:bg-stone-800 bg-gray-100 shadow-md">
+  <div class="text-center mb-6">
+      <h3 id="sign-up-for-our-newsletter" class="text-2xl font-bold text-orange-600 mb-2">Sign up for our newsletter</h3>
+      <p class="text-gray-600 dark:text-gray-300">Subscribe to get the best insights in crypto delivered directly to your inbox.</p>
+  </div>
+  <div class="flex justify-center items-center">
+      <form class="flex items-center w-full max-w-md bg-white border border-gray-300  shadow-sm overflow-hidden">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOSAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuMDAwMTIgNC4xNDgzOUw4LjQ1MTc5IDkuMDMyNjdDOC43NjIxOSA5LjIzNjI5IDkuMTI2OTggOS4zNDQ5NSA5LjUwMDEyIDkuMzQ0OTVDOS44NzMyNyA5LjM0NDk1IDEwLjIzODEgOS4yMzYyOSAxMC41NDg1IDkuMDMyNjdMMTguMDAwMSA0LjE0ODM5TTIuODg5MDEgMTQuMzYyN0gxNi4xMTEyQzE2LjYxMjIgMTQuMzYyNyAxNy4wOTI2IDE0LjE2NyAxNy40NDY5IDEzLjgxODdDMTcuODAxMSAxMy40NzA0IDE4LjAwMDEgMTIuOTk4MSAxOC4wMDAxIDEyLjUwNTVWMy4yMTk4MUMxOC4wMDAxIDIuNzI3MjcgMTcuODAxMSAyLjI1NDkgMTcuNDQ2OSAxLjkwNjYyQzE3LjA5MjYgMS41NTgzMyAxNi42MTIyIDEuMzYyNjcgMTYuMTExMiAxLjM2MjY3SDIuODg5MDFDMi4zODgwNSAxLjM2MjY3IDEuOTA3NiAxLjU1ODMzIDEuNTUzMzYgMS45MDY2MkMxLjE5OTEzIDIuMjU0OSAxLjAwMDEyIDIuNzI3MjcgMS4wMDAxMiAzLjIxOTgxVjEyLjUwNTVDMS4wMDAxMiAxMi45OTgxIDEuMTk5MTMgMTMuNDcwNCAxLjU1MzM2IDEzLjgxODdDMS45MDc2IDE0LjE2NyAyLjM4ODA1IDE0LjM2MjcgMi44ODkwMSAxNC4zNjI3WiIgc3Ryb2tlPSIjQTA5RkEwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K" alt="mail icon" class="ml-4 w-5 h-5 text-gray-500">
+          <input type="email" placeholder="satoshi@email.com" name="email" class="w-full py-3 px-4 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <button type="submit" role="button" aria-label="Sign up for newsletter" class="bg-orange-600 text-white hover:bg-orange-700 p-3 focus:outline-none">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
+          </button>
+      </form>
+  </div>
+</div>
+
+
+
+
+  
+{% endblock %}

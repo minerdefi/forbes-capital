@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="dark"> <!-- Optional: Default to dark mode -->
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}{% endblock %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/fc2.png' %}" rel="icon">
+  <link href="{% static 'images/fc2.png' %}" rel="apple-touch-icon">
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=DM+Serif+Text:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/8bfe423d4f.js" crossorigin="anonymous"></script>
+  
+  <!-- Tailwind CSS Links -->
+  <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+  {% comment %} <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3.0/dist/tailwind.min.css" rel="stylesheet"> {% endcomment %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+
+<body class="bg-white dark:bg-stone-900 text-gray-900 dark:text-gray-100 transition duration-500 overflow-x-hidden flex flex-col min-h-screen">
+  <nav class="bg-white dark:bg-stone-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20"> <!-- Increased height -->
+        <div class="flex">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="{% url 'home' %}">
+              <img src="{% static 'images/fc1.png' %}" alt="Logo" class="h-10 w-auto"> <!-- Adjusted logo height -->
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-4 items-center titillium-web-semibold">
+          <a href="{% url 'home' %}" class="hover:text-base dark:hover:text-base">Home</a>
+          <a href="{% url 'funds' %}" class="hover:text-base dark:hover:text-base">Funds</a>
+          <a href="{% url 'portfolio' %}" class="hover:text-base dark:hover:text-base">Portfolio</a>
+          <a href="{% url 'team' %}" class="hover:text-base dark:hover:text-base">Team</a>
+          <a href="{% url 'contact' %}" class="hover:text-base dark:hover:text-base">Contact</a>
+          <a href="{% url 'methodology' %}" class="hover:text-base dark:hover:text-base">Methodology</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="text-xl">
+            <i id="theme-toggle-icon" class="fas fa-sun"></i>
+          </button>
+          {% if user.is_authenticated %}
+            <a href="{% url 'dashboard' %}" class="inline-block rounded-md hover:text-base dark:hover:text-base px-3 py-2 text-xl"><i class="fas fa-user-circle"></i></a>
+          {% else %}
+            <a href="{% url 'login' %}" class="inline-block rounded-md hover:text-base dark:hover:text-base px-3 py-2 text-xl"><i class="fas fa-sign-in-alt"></i></a>
+          {% endif %}
+          <button id="mobile-menu-button" class="md:hidden text-xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="{% url 'home' %}" class="block py-2">Home</a>
+      <a href="{% url 'funds' %}" class="block py-2">Funds</a>
+      <a href="{% url 'portfolio' %}" class="block py-2">Portfolio</a>
+      <a href="{% url 'team' %}" class="block py-2">Team</a>
+      <a href="{% url 'contact' %}" class="block py-2">Contact</a>
+      <a href="{% url 'methodology' %}" class="block py-2">Methodology</a>
+    </div>
+  </nav>
+
+  <style>
+    #alert {
+        z-index: 1000; /* Ensure it's above most other elements */
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    #alert.fade-out {
+        opacity: 0;
+    }
+    
+  </style>
+  
+  {% if messages %}
+    {% for message in messages %}
+      <div id="alert" class="fixed top-0 inset-x-0 px-4 py-3 bg-base text-white text-center hidden fade-in-down">
+        <p>{{ message }}</p>
+        <button id="close-btn" class="absolute right-4 top-2 text-white hover:text-gray-200">
+          &times;
+        </button>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <main class="flex-grow">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="bg-gray-700 dark:bg-stone-800 text-gray-300 py-12 mt-auto">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8"> <!-- Adjusted margins and padding -->
+      <div class="flex flex-wrap justify-between -mx-6">
+        <div class="w-full md:w-6/12 lg:w-6/12 px-6 mb-8 md:mb-0">
+          <div class="grid grid-cols-2 gap-6">
+            <ul class="space-y-2 dm-serif-text-regular sm:text-xl md:text-xl lg:text-xl">
+              <li><a href="{% url 'home' %}" class="hover:text-white transition-colors duration-300">Home</a></li>
+              <li><a href="{% url 'funds' %}" class="hover:text-white transition-colors duration-300">Funds</a></li>
+              <li><a href="{% url 'portfolio' %}" class="hover:text-white transition-colors duration-300">Portfolio</a></li>
+              <li><a href="{% url 'team' %}" class="hover:text-white transition-colors duration-300">Team</a></li>
+              <li><a href="{% url 'contact' %}" class="hover:text-white transition-colors duration-300">Contact</a></li>
+            </ul>
+
+            <ul class="space-y-2 titillium-web-semibold">
+              <li><a href="{% url 'tnc' %}" class="hover:text-white transition-colors duration-300">Terms</a></li>
+              <li><a href="{% url 'privacy' %}" class="hover:text-white transition-colors duration-300">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-full md:w-6/12 lg:w-6/12 mb-8 md:mb-0">
+          <div class="px-9 titillium-web-semibold">
+            <h3 id="get-in-touch" class="font-semibold text-white text-3xl mb-4">GET IN TOUCH</h3>
+            <p class="text-gray-400 leading-relaxed mb-6 titillium-web-regular">We’re always looking for compelling ideas, business, and partnership opportunities. We also enjoy reading your feedback. If you’re submitting a business proposal, please include a clear description and any resources that could help us evaluate your opportunity.</p>
+            <!-- Aligning email to the right on mobile -->
+            <p class="text-center sm:text-left"><a href="mailto:support@forbespartners.org" target="_blank" class="text-base hover:text-base transition-colors justify-center duration-300">support@forbespartners.org</a></p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="w-full px-6">
+          <div class="text-center">
+            <div class="flex items-center justify-center mb-4">
+              <div class="h-10 w-10 rounded-full flex items-center justify-center mr-3">
+                <span class="text-4xl text-gray-300 font-bold dm-serif-text-regular">
+                  <a href="{% url 'home' %}">
+                    <img src="{% static 'images/fc1.png' %}" alt="Logo" class="h-10 w-auto"> <!-- Adjusted logo height -->
+                  </a>
+                </span>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm">©2017-2024 Forbes Capital. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const alertBox = document.getElementById('alert');
+    const closeBtn = document.getElementById('close-btn');
+    
+    // Close the alert when the close button is clicked
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            alertBox.classList.add('fade-out');
+            setTimeout(() => alertBox.style.display = 'none', 500); // Adjust the timeout to match the fade-out transition
+        });
+    }
+
+    // Automatically hide the alert after 5 seconds
+    setTimeout(function() {
+        if (alertBox) {
+            alertBox.classList.add('fade-out');
+            setTimeout(() => alertBox.style.display = 'none', 500); // Adjust the timeout to match the fade-out transition
+        }
+    }, 5000);
+});
+</script>
+
+<script src="{% static 'js/custom.js' %}"></script>
+
+</html>

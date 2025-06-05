@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FC | Methodology{% endblock %}
+
+{% block content %}
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+  crossorigin="anonymous"
+></script>
+
+<style>
+/* Smooth Sidebar Transition */
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+  height: 100vh; /* Ensure sidebar occupies full screen height */
+  position: fixed; /* Make the sidebar fixed */
+  top: 0;
+  left: 0;
+  width: 300px; /* Adjust the sidebar width as needed */
+  background-color: #374151; /* Match dark mode sidebar color */
+  z-index: 50;
+  overflow-y: auto; /* Allow sidebar content to scroll if necessary */
+}
+
+/* Ensure the body and html occupy full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjust layout container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 300px; /* Ensure the main content is positioned next to the sidebar */
+  flex: 1;
+  padding: 6px;
+  overflow-y: auto; /* Allow the content to scroll */
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    transform: translateX(-100%); /* Initially hide sidebar on small screens */
+    background-color: #374151; /* Match dark mode sidebar color */
+  }
+
+  /* Adjust main content to avoid overlapping sidebar */
+  .main-content {
+    margin-left: 0;
+  }
+}
+</style>
+
+<section class="container titillium-web-light">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar dark:bg-stone-800 bg-gray-700 text-white p-6 space-y-6">
+      <div class="text-2xl font-semibold">ForbesCapital®</div>
+      <div>
+        <h3 class="text-sm uppercase text-gray-400 mb-2">Governance</h3>
+        <ul class="space-y-2 text-lg">
+          <li>ForbesCapital Crypto Index Committee</li>
+          <li>ForbesCapital Crypto Index Advisory Board</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="uppercase text-gray-400 mb-2">Eligibility Requirements</h3>
+        <ul class="space-y-2 text-lg">
+          <li>Crypto Asset Trading Venue Eligibility Requirements</li>
+          <li>Crypto Asset Eligibility Requirements</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm uppercase text-gray-400 mb-2">
+          Asset Pricing Methodology
+        </h3>
+        <ul class="space-y-2 text-lg">
+          <li>Crypto Asset Prices</li>
+          <li>Treatment of Network Distributions</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content w-full  p-6">
+      <!-- Header with Toggle Button -->
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">ForbesCapital Crypto Asset Index Methodology</h1>
+        <!-- Toggle Button -->
+        <button id="toggleButton" class="md:hidden p-2 rounded">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <div class="border p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-4 mb-4">
+            <i class="fa-solid fa-coins text-2xl"></i>
+            <h3 class="text-xl font-semibold">Eligible Crypto Assets</h3>
+          </div>
+          <p class="mb-4">
+            Crypto assets must meet stringent criteria prior to inclusion in
+            our indexes.
+          </p>
+          <a href="#" class="text-base font-medium">Jump to →</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="border p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-4 mb-4">
+            <i class="fa-solid fa-users text-2xl"></i>
+            <h3 class="text-xl font-semibold">Index Committee</h3>
+          </div>
+          <p class="mb-4">
+            The ForbesCapital Crypto Indexes are supported and maintained by
+            industry experts.
+          </p>
+          <a href="#" class="text-base font-medium">Jump to →</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="border p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-4 mb-4">
+            <i class="fa-solid fa-chart-line text-2xl"></i>
+            <h3 class="text-xl font-semibold">Eligible Exchanges</h3>
+          </div>
+          <p class="mb-4">
+            Crypto asset exchanges must meet certain criteria to be included
+            in index methodology.
+          </p>
+          <a href="#" class="text-base font-medium">Jump to →</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="border p-6 rounded-lg shadow-sm hover:shadow-md transition">
+          <div class="flex items-center space-x-4 mb-4">
+            <i class="fa-solid fa-layer-group text-2xl"></i>
+            <h3 class="text-xl font-semibold">Investable Indexes</h3>
+          </div>
+          <p class="mb-4">
+            The ForbesCapital Crypto Indexes include large cap, mid cap, small cap
+            and total market indexes.
+          </p>
+          <a href="#" class="text-base font-medium">Jump to →</a>
+        </div>
+      </div>
+
+      <!-- Subheadings and Notes Under the Cards -->
+      <div class="mt-12 space-y-6 mx-auto">
+        <!-- Section 1 -->
+        <div>
+            <h4 class="text-2xl font-semibold mb-4">I. Guiding Principles and Indexing Approach</h4>
+            <p class="text-gray-600 mb-6 text-lg">
+              The ForbesCapital Crypto Indexes were developed to provide investors with a clear, rules-based, and transparent way to track the value of individual crypto assets and groups of crypto assets. The indexes are designed for benchmarking active strategies, serving as underlying indexes for index-tracking funds, or simply measuring the returns of the market over time.
+            </p>
+            <p class="text-gray-600 mb-6 text-lg">
+              The crypto market is new and presents many challenges to well-established protocols for indexing traditional assets such as stocks and bonds. The ForbesCapital Crypto Indexes aim to combine the best of traditional asset indexing methodologies with appropriate adjustments to adapt those practices to the crypto space.
+            </p>
+            <p class="text-gray-600 text-lg mb-6">The guiding principles of the ForbesCapital Crypto Indexes include:</p>
+            <ul class="list-disc pl-6 text-gray-600 text-lg">
+              <li>Index and pricing decisions must follow a clear, rules-based, and transparent process.</li>
+              <li>If the judgment of the ForbesCapital Crypto Index Committee is required when applying those rules, decisions will be made public with full documentation of the decision-making process.</li>
+              <li>Indexes are designed in all aspects to be investable and replicable; as such, they will take into account measures surrounding liquidity, capital controls, trading venue stability, custody limitations, and other factors in a rules-based manner.</li>
+            </ul>
+          </div>
+          
+
+        <!-- Section 2 -->
+        <div>
+          <h4 class="text-2xl font-semibold mb-2">II. Governance</h4>
+          <p class="text-gray-600 text-lg">
+            The ForbesCapital Crypto Indexes will be governed by the ForbesCapital Crypto Index Committee with the support of the ForbesCapital Crypto Index Advisory Board. Individual indexes may have additional support from advisory councils, as designated in this methodology.
+          </p>
+          <ul class=" pl-6 text-gray-600 text-lg">
+            <li><b> A. Crypto Asset Trading Venue Eligibility Requirements:</b>
+                <ul class="pl-6 text-gray-600 text-lg">
+                <li><strong>i.Eligibility Requirements:</strong><br>
+                    ForbesCapital considers an entity to be an Eligible Crypto Asset Trading Venue if it meets the following criteria:
+                    <ul class="pl-6 text-gray-600 text-lg"><br><br>
+                        <li>a. Provides an open platform for exchanging at least one crypto asset for either another crypto asset or for a fiat currency<br><br>
+                            This requirement exists to identify the set of institutions to consider for further analysis.
+                        </li><br><br>
+                        <li><strong>b. Is not domiciled in a country, region, or locality that implements meaningful capital controls on international investors</strong><br><br>
+                            This requirement exists to eliminate assets or price inputs from trading venues that are not accessible by international investors. The cryptomarket has seen unusual premiums and/or discounts emerge in markets where meaningful capital controls exist.
+                        </li><br><br>
+                        <li><strong>c. Is not subject to extraordinary regulatory or legal action that is likely to lead to unusual pricing, significantly disrupt institutional access to the market, or disrupt fiat withdrawals</strong><br><br>
+                            This requirement exists to limit trading venues to those that are positive actors in the community, and to limit the potential for interruptions in service or unusual pricing due to government or regulatory enforcement actions.
+                        </li><br><br>
+                        <li><strong>d. Charges fees for trading</strong><br><br>
+                            This provision is designed to exclude trading venues that encourage wash sale trading.<br><br>
+                            Note that trading venues that engage in “trade mining”—the practice of compensating individuals with a venue-specific coin for trading other coins on that trading venue, as a way of offsetting the cost of executing transactions—are also excluded under this clause.
+                        </li><br><br>
+                        <li><strong>e. Has a functioning, secure, and reliable application programming interface (API) allowing for the timely ingestion of trade and volume data</strong><br>
+                            A functioning, secure, and reliable API is required to onboard data from trading venues. In addition, it is a test of the reliability, transparency, and robustness of the trading venue itself.
+                        </li><br><br>
+                        <li><strong>f. Has no significant downtime, withdrawal, or known security issues</strong><br><br>
+                            This requirement exists to protect the index methodology from pricing or asset inclusion distortions that arise at trading venues with significant downtime, withdrawal, or known security issues.
+                        </li><br><br>
+                        <li><strong>g.Accounts for more than 1.0% of the combined trailing 30-day dollar trading volume of all crypto assets on entities that meet rules III.A.i.a through III.A.i.f</strong><br><br>
+                            This requirement exists to ensure that the index captures only robust trading venues where sufficient volume exists to support accurate price discovery. In addition, excluding the long tail of small trading venues eliminates significant engineering and maintenance burdens that would have little to no impact on the resulting price data. The ForbesCapital Crypto Index Committee reserves the right to add additional trading venues that fall outside of the 1.0% requirement as contributors if it deems those trading venues systemically important.
+                        </li><br><br>
+                        <li><strong>h.In the opinion of the ForbesCapital Crypto Index Committee, has significant real spot trading volume.</strong><br><br>
+                            The goal of this rule is to select venues that the ForbesCapital Crypto Index Committee believes have economically meaningful trading volume.
+                        </li>
+                    </ul>
+                </li>
+                <li></li>
+                <li></li>
+                </ul>
+            </li>
+            <li>If the judgment of the ForbesCapital Crypto Index Committee is required when applying those rules, decisions will be made public with full documentation of the decision-making process.</li>
+            <li>Indexes are designed in all aspects to be investable and replicable; as such, they will take into account measures surrounding liquidity, capital controls, trading venue stability, custody limitations, and other factors in a rules-based manner.</li>
+          </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <div>
+          <h4 class="text-2xl font-semibold mb-2">Eligible Exchanges</h4>
+          <p class="text-gray-600 text-lg">
+            Only exchanges that meet high liquidity and transparency standards are included in the methodology.
+          </p>
+        </div>
+
+        <!-- Section 4 -->
+        <div>
+          <h4 class="text-2xl font-semibold mb-2">Investable Indexes</h4>
+          <p class="text-gray-600 text-lg">
+            The indexes provide a clear view of the market, spanning from large-cap to total market indexes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for Sidebar Toggle -->
+  <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const sidebar = document.getElementById("sidebar");
+
+    toggleButton.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+    });
+  </script>
+</section>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}FC | Home{% endblock %}
+{% block content %}
+<section class="relative flex flex-col items-center justify-center min-h-[50vh] sm:min-h-[70vh] lg:min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('{% static "images/Hero.png" %}');">
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div class="  p-6 sm:p-8 lg:p-10 max-w-2xl mx-auto">
+            <span class="block text-white  text-base sm:text-lg mb-2 titillium-web-semibold">THESIS</span>
+            <h1 id="crypto-will-create-the-largest-one-time-shift-in-wealth-in-the-history-of-the-internet" class="dm-serif-text-regular text-white text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-snug lg:leading-snug">
+                Crypto will create the largest one-time shift in wealth in the history of the internet
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="py-16"> <!-- Increased padding -->
+    <div class="container mx-auto px-8 lg:px-9"> <!-- Slightly increased padding -->
+        <!-- Main Content Section -->
+        <div class="flex flex-col items-center justify-center text-center mb-12"> <!-- Increased margin bottom -->
+            <div class="w-full lg:w-10/12">
+                <span class="text-3xl text-gray-600 rounded-md titillium-web-semibold">WHY NOW?</span>
+                <h2 id="three-powerful-cultural-and-technological-forces-are-colliding-simultaneously" class="lg:text-4xl sm:text-2xl md:text-3xl font-bold   mt-4 dm-serif-text-regular"> <!-- Increased margin top -->
+                    Three Powerful Cultural and Technological Forces are Colliding Simultaneously
+                </h2>
+            </div>
+        </div>
+    
+        <div class="flex flex-wrap justify-center">
+            <!-- Column 1 -->
+            <div class="w-full md:w-4/12 lg:w-4/12 p-4"> <!-- Increased padding -->
+                <div class="e  p-8   text-center"> <!-- Increased padding -->
+                    <h2 id="1" class="sm:text-3xl md:text-3xl lg:text-4xl font-bold mt-4 dm-serif-text-regular" >1</h2>
+                    <hr class="my-6 border-t border-gray-300 dark:border-gray-600"> <!-- Increased margin -->
+                    <p class="text-gray-600 dark:text-gray-300 titillium-web-semibold">
+                        The erosion of consumer trust in governments and corporations
+                    </p>
+                </div>
+            </div>
+            <!-- Column 2 -->
+            <div class="w-full md:w-4/12 lg:w-4/12 p-4"> <!-- Increased padding -->
+                <div class=" p-8    text-center"> <!-- Increased padding -->
+                    <h2 id="2" class="sm:text-3xl md:text-3xl lg:text-4xl font-bold mt-4 dm-serif-text-regular">2</h2>
+                    <hr class="my-6 border-t  border-gray-300 dark:border-gray-600"> <!-- Increased margin -->
+                    <p class="text-gray-600 dark:text-gray-300 titillium-web-semibold">
+                        Crypto networks unlock novel ways to organize economic activity and incentivize human behavior using new programmatic systems
+                    </p>
+                </div>
+            </div>
+            <!-- Column 3 -->
+            <div class="w-full md:w-4/12 lg:w-4/12 p-4"> <!-- Increased padding -->
+                <div class=" p-8   text-center"> <!-- Increased padding -->
+                    <h2 id="3" class="sm:text-4xl md:text-4xl lg:text-4xl font-bold mt-4 dm-serif-text-regular">3</h2>
+                    <hr class="my-6 border-t border-gray-300 dark:border-gray-600"> <!-- Increased margin -->
+                    <p class="text-gray-600 dark:text-gray-300 titillium-web-semibold">
+                        Software is eating finance, including the foundational concept of money
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Image Section -->
+            <div class="w-full lg:w-2/3 mx-auto">
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="{% static 'images/finance-renaissance.webp' %}" class="rounded shadow-lg object-cover">
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="w-full flex flex-col justify-center">
+                <div class="text-left">
+                    <span class="text-lg  font-semibold text-gray-600 titillium-web-semibold">Three Macro Investment Theses For Crypto</span>
+                    <h2 id="the-open-finance-renaissance" class="text-3xl font-bold text-gray-900 dark:text-white mt-2 dm-serif-text-regular">The Open Finance Renaissance</h2>
+                    <p class="mt-4 md:text-sm sm:text-sm lg:text-lg  text-gray-600 dark:text-gray-300 titillium-web-semibold">By making all units of value—stocks, bonds, real estate, currencies, and so forth—interoperable, programmable, and composable on distributed ledgers, capital markets will become more efficient and accessible to everyone on the planet.</p>
+                    <p class="mt-4 text-gray-600 md:text-sm sm:text-sm lg:text-lg  dark:text-gray-300 titillium-web-semibold">Just as the proliferation of capital markets over the last 100 years supported staggering levels of wealth creation, the permissionless, expansionary effect of open finance will pave the way for new services and applications that will deliver tremendous value.</p>
+                    <a class="mt-6 inline-block px-6 py-2 border  border-gray-600 text-gray-600 dark:text-gray-300 dark:border-gray-300 dark:hover:border-base rounded-md hover:border-base  hover:bg-base hover:text-gray-100 transition-colors titillium-web-semibold" href="{% url 'financerenaissance' %}">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Image Section -->
+            <div class="w-full lg:w-2/3 mx-auto order-1 md:order-2">
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="{% static 'images/bank-note-cash-close-up-min.webp' %}" class="rounded shadow-lg object-cover">
+                    <img src="{% static 'images/bank-note-cash-close-up-2-mini.webp' %}" class="rounded shadow-lg object-cover">
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="w-full flex flex-col justify-center order-2 md:order-1">
+                <div class="text-left ">
+                    <h2 id="the-open-finance-renaissance" class="text-3xl font-bold text-gray-900 dark:text-white mt-2 dm-serif-text-regular">The Web3 Vision</h2>
+                    <p class="mt-4 md:text-sm sm:text-sm lg:text-lg text-gray-600 dark:text-gray-300 titillium-web-semibold ">Whereas the open finance thesis is based on the idea of programmable money, the Web3 thesis is based on the vision of self-sovereign data. The Web3 vision empowers consumers to own their own data. This stands in stark contrast to the status quo, in which tech giants, banks, and credit bureaus control consumers' data. As this paradigm shifts, incumbents will lose their primary competitive advantage—their data monopolies—unlocking a massive wave of innovation and value creation.</p>
+                    <p class="mt-4 text-gray-600 md:text-sm sm:text-sm lg:text-lg dark:text-gray-300 titillium-web-semibold">When consumers own their own data, data monopolies will crumble. The second and third order effects of this will be profound, enabling the creation of new businesses and services that we can’t yet imagine.</p>
+                    <a class="mt-6 inline-block px-6 py-2 border  border-gray-600 text-gray-600 dark:text-gray-300 dark:border-gray-300 dark:hover:border-base rounded-md hover:border-base  hover:bg-base hover:text-gray-100 transition-colors titillium-web-semibold" href="{% url 'financerenaissance' %}">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Image Section -->
+            <div class="w-full lg:w-2/3 mx-auto">
+                <div class="aspect-w-1 aspect-h-1">
+                    <img src="{% static 'images/global-state-free-money.webp' %}" class="rounded shadow-lg object-cover">
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="w-full flex flex-col justify-center">
+                <div class="text-left">
+                    
+                    <h2 id="the-open-finance-renaissance" class="text-3xl font-bold text-gray-900 dark:text-white mt-2 dm-serif-text-regular">Global, State-Free Money</h2>
+                    <p class="mt-4 md:text-sm sm:text-sm lg:text-lg text-gray-600 dark:text-gray-300 titillium-web-semibold">Many think of this as just “Digital Gold.” However we find that the digital gold framing is too narrow and substantially understates the opportunity. Global, state-free money is a superset of digital gold in terms of breadth and use cases, and it represents a dramatically larger market.</p>
+                    <p class="mt-4 text-gray-600 md:text-sm sm:text-sm lg:text-lg dark:text-gray-300 titillium-web-semibold">We expect the first digitally-native money to function as digital gold, but then also absorb some of the monetary premia of other non-gold stores of wealth. This is market expansionary to the current $7 trillion market cap of gold in the same way that Uber was market expansionary to taxis.</p>
+                    <a class="mt-6 inline-block px-6 py-2 border  border-gray-600 text-gray-600 dark:text-gray-300 dark:border-gray-300 dark:hover:border-base rounded-md hover:border-base hover:bg-base hover:text-gray-100 transition-colors titillium-web-semibold" href="{% url 'financerenaissance' %}">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-center items-center">
+            <div class="text-center">
+                <span class="block text-lg  text-gray-700 dark:text-gray-300 mb-4 titillium-web-semibold">INTERESTED IN JOINING OUR TEAM, PARTNERING WITH US, OR BUILDING SOMETHING GREAT?</span>
+                <a class="inline-block px-6 py-2 border border-gray-600 text-gray-600 dark:text-gray-300 dark:border-gray-300 dark:hover:border-base hover:border-base hover:bg-base hover:text-gray-100 rounded-md  transition-colors titillium-web-semibold" href="{% url 'contact' %}">Get in touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  
+  
+
+
+  
+
+
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'accounts/accountsbase.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <h2>History</h2>
+                <p class="mb-0 text-title-gray">Welcome back! Let’s start from where you left.</p>
+            </div>
+            <div class="col-sm-6 col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}"><i
+                                class="iconly-Home icli svg-color"></i></a></li>
+                    <li class="breadcrumb-item">History</li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-xxl-12 col-xl-12 proorder-xxl-8 col-lg-12 col-md-6 box-col-7">
+            <div class="card">
+                <div class="card-header card-no-border pb-0">
+                    <h3>Transaction History</h3>
+                </div>
+                <div class="card-body transaction-history pt-0">
+                    <div class="table-responsive theme-scrollbar">
+                        <table class="table display table-bordernone" id="transaction"
+                            style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Transaction</th>
+                                    <th>Amount</th>
+                                    <th>Description</th>
+                                    <th>Date/Time</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                     
+            
+          
+                
+                
+                
+     
+                            {% for transaction in transactions %}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-3">
+                                           
+                                            <div class="flex-grow-1">
+                                                    <h6>{{ transaction.transaction_type|capfirst }}</h6>
+                                           
+                                               
+                                            </div>
+                                        </div>
+                                    </td>
+                                    
+                                    <td class="text-success">${{ transaction.amount }}</td>
+                                    <td class="text-success">{{transaction.details }}</td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6>{{ transaction.timestamp|date:"Y-m-d H:i" }}</h6>
+                                               
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-end">
+                                        {%if transaction.confirmed  %}
+                    <div class="btn bg-light-success border-light-success text-success">Completed</div>
+                             {% else %}
+                    <div class="btn bg-light-warning border-light-success text-success">Pending</div>
+                        {% endif %}
+                            </td>
+                         </tr>
+                                {% empty %}      
+                             <tr>No Transactions </tr> 
+                        {% endfor %} 
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        {% if messages %}
+          <script>
+            function showAlertBox() {
+              {% for message in messages %}
+                alert("{{ message }}");
+              {% endfor %}
+            }
+            window.onload = showAlertBox;
+          </script>
+        {% endif %}
+          
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+

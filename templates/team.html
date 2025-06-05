@@ -1,0 +1,412 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}FC | Team{% endblock %}
+{% block content %}
+<section class="py-8 px-10">
+    <h2 class="lg:text-6xl md:text-4xl text-4xl mt-0 pt-0 font-bold dm-serif-text-regular mx-auto md:mx-10 lg:mx-10 lg:mt-20 my-auto  mb-10">Our Firm</h2>
+    <div class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-9 mx-auto">
+      
+      <div class="w-fit flex flex-col lg:text-xl md:text-lg  mt-0 pt-0 mx-auto md:mx-10 lg:mx-10 titillium-web-light">
+        <p class="mb-4">
+          Forbes Capital is a thesis-driven investment firm that invests in cryptocurrencies, tokens, and blockchain companies reshaping trillion-dollar markets. We manage a hedge fund and several venture funds, investing across both public and private markets.
+        </p>
+        <p class="mb-4">
+          Since founding the firm in May 2017, we’ve developed a reputation for being forward-leaning, independent thinkers. We are known for pioneering token economic models, valuation methodologies, and challenging long-standing assumptions that the crypto ecosystem takes for granted.
+        </p>
+        <p class="mb-4">
+          Crypto is the first inherently global asset class, and the team covers activity around the world.
+        </p>
+        <p class="mb-4">
+          As a crypto-native fund, we actively engage and participate in the networks we invest in. Moreover, we are intimately familiar with the crypto technology landscape and market structure. We are hands-on investors and will do everything in our power to maximize the success of our portfolio companies.
+        </p>
+        <p class="mb-4">
+          Today, we manage long-duration capital on behalf of storied venture capital funds, family offices, institutions, and high net-worth individuals.
+        </p>
+
+        
+      </div>
+      <div class="w-full lg:w-2/3 mx-auto">
+        <div class="aspect-w-1 aspect-h-1">
+            <img src="{% static 'images/fronttall.png'%}" class="rounded shadow-lg object-cover">
+        </div>
+      </div>
+      <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+    </div>
+  </section>
+
+  <section class="py-8 px-10">
+    <div class="w-full lg:w-7/12">
+        <h2 class="lg:text-5xl md:text-4xl text-4xl mt-0 pt-0 font-bold dm-serif-text-regular mx-auto md:mx-10 lg:mx-10  mb-4">The Team</h2>
+        <p class="w-fit flex flex-col md:text-xl lg:text-xl  mt-0 pt-0 mx-auto md:mx-10 lg:mx-10 titillium-web-light">The blockchain space is evolving at breakneck speed. Our team hails from diverse backgrounds, giving us a competitive edge in staying ahead.</p>
+    </div>
+
+    <div class="py-8 mx-auto md:mx-10 lg:mx-10 px-4">
+      <div class="lg:flex lg:flex-col">
+        <div class="lg:flex lg:flex-row items-center lg:justify-center lg:gap-6">
+          <div class="w-50 h-50 lg:w-64 lg:h-64 flex-shrink-0">
+            <img class="w-full h-full object-cover shadow-lg filter grayscale" alt="Bob Forbes" src="https://forbes-partners.com/wp-content/uploads/2022/02/bob-forbes-sm.jpg" />
+          </div>
+          <div class="w-full lg:w-auto mt-4 lg:mt-0 lg:pl-4">
+            <div class="flex justify-between lg:mb-4">
+              <div>
+                  <h4 class="text-2xl font-bold dm-serif-text-regular">Bob Forbes | <span class="text-gray-500 titillium-web-semibold">President</span></h4>
+                  <!-- Social Icons -->
+                  <div class="mt-4 flex space-x-4">
+                    <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                      <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                      <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                      <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                  </div>
+                </div>
+              <button class="lg:hidden text-xl focus:outline-none" onclick="toggleBio(this)">
+                <span class="text-2xl">+</span>
+              </button>
+            </div>
+            <div class="bio hidden lg:block lg:text-xl md:text-xl titillium-web-light">
+              <p class="">
+                Bob Forbes is the president and founder of Forbes Partners. He is based in the firm’s Denver, Colorado office.
+              </p>
+              <p class=" mt-2">
+                Since beginning his career in 1991, Bob has led more than 150 corporate finance initiatives as a business owner, private equity executive, and investment banker. His experience includes M&A, debt and equity financings, and corporate restructurings in a wide range of industries including technology, consumer products, food, healthcare, entertainment, energy, industrials, and business services.
+              </p>
+            </div>
+            <div class="bio mt-4 hidden lg:hidden titillium-web-light">
+              <p class="">
+                Bob Forbes is the president and founder of Forbes Partners. He is based in the firm’s Denver, Colorado office.
+              </p>
+              <p class=" mt-2">
+                Since beginning his career in 1991, Bob has led more than 150 corporate finance initiatives as a business owner, private equity executive, and investment banker. His experience includes M&A, debt and equity financings, and corporate restructurings in a wide range of industries including technology, consumer products, food, healthcare, entertainment, energy, industrials, and business services.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+      </div>
+    </div>
+
+    <div class="py-8 mx-auto md:mx-10 lg:mx-10 px-4">
+        <div class="lg:flex lg:flex-col">
+          <div class="lg:flex lg:flex-row items-center lg:justify-center lg:gap-6">
+            <div class="w-50 h-50 lg:w-64 lg:h-64 flex-shrink-0">
+              <img class="w-full h-full object-cover shadow-lg filter grayscale" alt="Jacob Samani" src="https://images.ctfassets.net/qtbqvna1l0yq/4OF6ywwNnbQLmD5qsIQ9kF/29aa033b59f51bc65fff3729e6948fe4/kyle_samani__2_.jpg?w=700&h=700&q=50&fm=webp" />
+          </div>
+            <div class="w-full lg:w-auto mt-4 lg:mt-0 lg:pl-4">
+              <div class="flex justify-between lg:mb-4">
+                <div>
+                    <h4 class="text-2xl font-bold dm-serif-text-regular">Jacob Samani | <span class="text-gray-500 titillium-web-semibold">Managing Partner</span></h4>
+                    <!-- Social Icons -->
+                    <div class="mt-4 flex space-x-4">
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-twitter fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-github fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-instagram fa-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                <button class="lg:hidden text-xl focus:outline-none" onclick="toggleBio(this)">
+                  <span class="text-2xl">+</span>
+                </button>
+              </div>
+              <div class="bio hidden lg:block lg:text-xl md:text-xl titillium-web-light">
+                <p class="">
+                  As a former engineer, Jacob leads technical thesis formation and diligence. He is the more outward-facing partner, owning relationships with entrepreneurs and other investors. He is widely recognized in the crypto ecosystem for his writing and system-level analysis.
+                </p>
+                <p class=" mt-2">
+                  Jacob previously founded Pristine, a health IT startup that raised more than $5M in VC, and which was acquired by Upskill. Jacob holds degrees in Finance and Management from NYU.
+                </p>
+              </div>
+              <div class="bio mt-4 hidden lg:hidden titillium-web-light">
+                <p class="">
+                  As a former engineer, Jacob leads technical thesis formation and diligence. He is the more outward-facing partner, owning relationships with entrepreneurs and other investors. He is widely recognized in the crypto ecosystem for his writing and system-level analysis.
+                </p>
+                <p class=" mt-2">
+                  Jacob previously founded Pristine, a health IT startup that raised more than $5M in VC, and which was acquired by Upskill. Jacob holds degrees in Finance and Management from NYU.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+        </div>
+      </div>
+      <div class="py-8 mx-auto md:mx-10 lg:mx-10 px-4">
+        <div class="lg:flex lg:flex-col">
+          <div class="lg:flex lg:flex-row items-center lg:justify-center lg:gap-6">
+            <div class="w-50 h-50 lg:w-64 lg:h-64 flex-shrink-0">
+              <img class="w-full h-full object-cover shadow-lg filter grayscale" alt="Bill  Jain" src="https://forbes-partners.com/wp-content/uploads/2022/02/bill-nack-sm.jpg" />
+            </div>
+            <div class="w-full lg:w-auto mt-4 lg:mt-0 lg:pl-4">
+              <div class="flex justify-between lg:mb-4">
+                <div>
+                    <h4 class="text-2xl font-bold dm-serif-text-regular">Bill  Jain | <span class="text-gray-500 titillium-web-semibold">Managing Director + Partner</span></h4>
+                    <!-- Social Icons -->
+                    <div class="mt-4 flex space-x-4">
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-twitter fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-github fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-instagram fa-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                <button class="lg:hidden text-xl focus:outline-none" onclick="toggleBio(this)">
+                  <span class="text-2xl">+</span>
+                </button>
+              </div>
+              <div class="bio hidden lg:block lg:text-xl md:text-xl titillium-web-light">
+                <p class="">
+                  Bill  leads our portfolio construction, risk management, and manages the team. He is passionate about the new economic paradigm enabled by blockchain technology and focuses on decentralized financial products, token economics, and blockchain go-to-market strategies.
+                </p>
+                <p class=" mt-2">
+                  Bill  previously founded ePatientFinder, a health IT tech startup that raised more than $10M in VC, and which was acquired by Elligo Health Research. Bill  holds degrees in Finance and Political Science from NYU.
+                </p>
+              </div>
+              <div class="bio mt-4 hidden lg:hidden titillium-web-light">
+                <p class="">
+                  Bill  leads our portfolio construction, risk management, and manages the team. He is passionate about the new economic paradigm enabled by blockchain technology and focuses on decentralized financial products, token economics, and blockchain go-to-market strategies.
+                </p>
+                <p class=" mt-2">
+                  Bill  previously founded ePatientFinder, a health IT tech startup that raised more than $10M in VC, and which was acquired by Elligo Health Research. Bill  holds degrees in Finance and Political Science from NYU.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+        </div>
+      </div>
+     
+      <div class="py-8 mx-auto md:mx-10 lg:mx-10 px-4">
+        <div class="lg:flex lg:flex-col">
+          <div class="lg:flex lg:flex-row items-center lg:justify-center lg:gap-6">
+            <div class="w-50 h-50 lg:w-64 lg:h-64 flex-shrink-0">
+              <img class="w-full h-full object-cover shadow-lg filter grayscale" alt="Alex Shapiro" src="https://forbes-partners.com/wp-content/uploads/2022/02/james-morgan-sm.jpg" />
+            </div>
+            <div class="w-full lg:w-auto mt-4 lg:mt-0 lg:pl-4">
+              <div class="flex justify-between lg:mb-4">
+                <div>
+                    <h4 class="text-2xl font-bold dm-serif-text-regular">Alex Shapiro | <span class="text-gray-500 titillium-web-semibold">Partner, Head of Investor Relations, and Member of the Investment Team </span></h4>
+                    <!-- Social Icons -->
+                    <div class="mt-4 flex space-x-4">
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-twitter fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-github fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-instagram fa-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                <button class="lg:hidden text-xl focus:outline-none" onclick="toggleBio(this)">
+                  <span class="text-2xl">+</span>
+                </button>
+              </div>
+              <div class="bio hidden lg:block lg:text-xl md:text-xl titillium-web-light">
+                <p class="">
+                 Alex leads investor relations and manages relationships with our partners. He also specializes in structured investments.
+                </p>
+                <p class=" mt-2">
+                 Alex has 15 years of investment banking experience structuring nine and ten-figure financings, spin outs, mergers, and acquisitions.
+                </p>
+              </div>
+              <div class="bio mt-4 hidden lg:hidden titillium-web-light">
+                <p class="">
+                 Alex leads investor relations and manages relationships with our partners. He also specializes in structured investments.
+                </p>
+                <p class=" mt-2">
+                 Alex has 15 years of investment banking experience structuring nine and ten-figure financings, spin outs, mergers, and acquisitions.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+        </div>
+      </div>
+      <div class="py-8 mx-auto md:mx-10 lg:mx-10 px-4">
+        <div class="lg:flex lg:flex-col">
+          <div class="lg:flex lg:flex-row items-center lg:justify-center lg:gap-6">
+            <div class="w-50 h-50 lg:w-64 lg:h-64 flex-shrink-0">
+              <img class="w-full h-full object-cover shadow-lg filter grayscale" alt="William Xethalis" src="https://images.ctfassets.net/qtbqvna1l0yq/3br4X1Ez4jIKeA5jscDJUT/bd374c7934e4b2c4f389778e99f9b0ad/Gregoy_Xethalis_copy.jpeg?w=448&h=446&q=50&fm=webp" />
+            </div>
+            <div class="w-full lg:w-auto mt-4 lg:mt-0 lg:pl-4">
+              <div class="flex justify-between lg:mb-4">
+                <div>
+                    <h4 class="text-2xl font-bold dm-serif-text-regular">William Xethalis | <span class="text-gray-500 titillium-web-semibold">Partner, General Counsel </span></h4>
+                    <!-- Social Icons -->
+                    <div class="mt-4 flex space-x-4">
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-twitter fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-github fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-instagram fa-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                <button class="lg:hidden text-xl focus:outline-none" onclick="toggleBio(this)">
+                  <span class="text-2xl">+</span>
+                </button>
+              </div>
+              <div class="bio hidden lg:block lg:text-xl md:text-xl titillium-web-light">
+                <p class="">
+                 William Xethalis is General Counsel of Forbes Capital Management LLC. Joining Forbes in July 2021, William manages all legal and policy functions for the firm and works with our portfolio companies on legal and policy strategy.
+                </p>
+                <p class=" mt-2">
+                 Prior to joining Forbes, William was a partner in the Investment Management and FinTech practices at Chapman and Cutler LLP. with 11 years of experience counseling clients on digital asset matters, with a focus on asset managers, CeFi institutions and stable value tokens. William’s practice also involved representation of traditional equity, debt and commodity asset managers, with a specialty in novel registered products. William is a member of the Board of the Fordham Law Alumni Association and Senior Lecturing Fellow at Duke University School of Law, where he teaches Fintech and Blockchain Law and Policy.
+                </p>
+              </div>
+              <div class="bio mt-4 hidden lg:hidden titillium-web-light">
+                <p class="">
+                 William Xethalis is General Counsel of Forbes Capital Management LLC. Joining Forbes in July 2021, William manages all legal and policy functions for the firm and works with our portfolio companies on legal and policy strategy.
+                </p>
+                <p class=" mt-2">
+                 Prior to joining Forbes, William was a partner in the Investment Management and FinTech practices at Chapman and Cutler LLP. with 11 years of experience counseling clients on digital asset matters, with a focus on asset managers, CeFi institutions and stable value tokens. William’s practice also involved representation of traditional equity, debt and commodity asset managers, with a specialty in novel registered products. William is a member of the Board of the Fordham Law Alumni Association and Senior Lecturing Fellow at Duke University School of Law, where he teaches Fintech and Blockchain Law and Policy.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+        </div>
+      </div>
+      <div class="py-8 mx-auto md:mx-10 lg:mx-10 px-4">
+        <div class="lg:flex lg:flex-col">
+          <div class="lg:flex lg:flex-row items-center lg:justify-center lg:gap-6">
+            <div class="w-50 h-50 lg:w-64 lg:h-64 flex-shrink-0">
+              <img class="w-full h-full object-cover shadow-lg filter grayscale" alt="Michelle Elena" src="https://forbes-partners.com/wp-content/uploads/2022/04/kelly-fitzgerald-sm.jpg" />
+            </div>
+            <div class="w-full lg:w-auto mt-4 lg:mt-0 lg:pl-4">
+              <div class="flex justify-between lg:mb-4">
+                <div>
+                    <h4 class="text-2xl font-bold dm-serif-text-regular">Michelle Elena Robert | <span class="text-gray-500 titillium-web-semibold">Partner, Head of Communications</span></h4>
+                    <!-- Social Icons -->
+                    <div class="mt-4 flex space-x-4">
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-twitter fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-github fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-instagram fa-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                <button class="lg:hidden text-xl focus:outline-none" onclick="toggleBio(this)">
+                  <span class="text-2xl">+</span>
+                </button>
+              </div>
+              <div class="bio hidden lg:block lg:text-xl md:text-xl titillium-web-light">
+                <p class="">
+                Noah Applebaum is an Investment Partner at Multicoin Capital. Previously, Applebaum worked at Bitspark, the world’s first blockchain remittance platform to leverage Bitcoin to send money overseas. While there he assisted with the development of Zephyr, a pegged cryptocurrency solution on the BitShares DEX. He later went on to work with Deloitte, an industry-leading audit, consulting, and tax advisory in their multi-state tax division.
+                </p>
+              </div>
+              <div class="bio mt-4 hidden lg:hidden titillium-web-light">
+                <p class="">
+                Noah Applebaum is an Investment Partner at Multicoin Capital. Previously, Applebaum worked at Bitspark, the world’s first blockchain remittance platform to leverage Bitcoin to send money overseas. While there he assisted with the development of Zephyr, a pegged cryptocurrency solution on the BitShares DEX. He later went on to work with Deloitte, an industry-leading audit, consulting, and tax advisory in their multi-state tax division.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+        </div>
+      </div>
+      <div class="py-8 mx-auto md:mx-10 lg:mx-10 px-4">
+        <div class="lg:flex lg:flex-col">
+          <div class="lg:flex lg:flex-row items-center lg:justify-center lg:gap-6">
+            <div class="w-50 h-50 lg:w-64 lg:h-64 flex-shrink-0">
+              <img class="w-full h-full object-cover shadow-lg filter grayscale" alt="Noah Applebaum" src="https://forbes-partners.com/wp-content/uploads/2022/02/doug-freyschlag-sm.jpg" />
+            </div>
+            <div class="w-full lg:w-auto mt-4 lg:mt-0 lg:pl-4">
+              <div class="flex justify-between lg:mb-4">
+                <div>
+                    <h4 class="text-2xl font-bold dm-serif-text-regular">Noah Applebaum | <span class="text-gray-500 titillium-web-semibold">Investment Partner </span></h4>
+                    <!-- Social Icons -->
+                    <div class="mt-4 flex space-x-4">
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-twitter fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-github fa-lg"></i>
+                      </a>
+                      <a href="#" target="_blank" class="text-gray-500 hover:text-gray-700">
+                        <i class="fab fa-instagram fa-lg"></i>
+                      </a>
+                    </div>
+                  </div>
+                <button class="lg:hidden text-xl focus:outline-none" onclick="toggleBio(this)">
+                  <span class="text-2xl">+</span>
+                </button>
+              </div>
+              <div class="bio hidden lg:block lg:text-xl md:text-xl titillium-web-light">
+                <p class="">
+                Noah Applebaum is an Investment Partner at Multicoin Capital. Previously, Applebaum worked at Bitspark, the world’s first blockchain remittance platform to leverage Bitcoin to send money overseas. While there he assisted with the development of Zephyr, a pegged cryptocurrency solution on the BitShares DEX. He later went on to work with Deloitte, an industry-leading audit, consulting, and tax advisory in their multi-state tax division.
+                </p>
+              </div>
+              <div class="bio mt-4 hidden lg:hidden titillium-web-light">
+                <p class="">
+                Noah Applebaum is an Investment Partner at Multicoin Capital. Previously, Applebaum worked at Bitspark, the world’s first blockchain remittance platform to leverage Bitcoin to send money overseas. While there he assisted with the development of Zephyr, a pegged cryptocurrency solution on the BitShares DEX. He later went on to work with Deloitte, an industry-leading audit, consulting, and tax advisory in their multi-state tax division.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+          <hr class="my-6 border-t  border-gray-300 dark:border-gray-600">
+        </div>
+      </div>
+      
+      <script>
+        function toggleBio(button) {
+          const bioSection = button.closest('div').nextElementSibling;
+          bioSection.classList.toggle('hidden');
+          button.querySelector('span').textContent = bioSection.classList.contains('hidden') ? '+' : '-';
+        }
+      </script>
+      
+      
+  </section>
+  
+  
+
+
+{% endblock %}

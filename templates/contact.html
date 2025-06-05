@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}FC | Contact{% endblock %}
+{% block content %}
+
+<section class="mx-auto md:w-10/12 lg:w-10/12 p-10">
+  <div class="container mx-auto flex flex-wrap">
+    <!-- Left Section -->
+    <div class="w-full md:w-1/2 lg:w-1/2 xl:w-[calc(100%-420px-64px)] lg:p-6 md:p-4 p-2 mb-8 md:mb-0 titillium-web-light text-lg md:text-xl lg:text-xl">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6  dm-serif-text-regular">Contact us</h1>
+      <div>
+        <p class="mb-4">
+          If you’re interested in investing in our funds, please fill out the form below and we’ll get back to you promptly.
+        </p>
+        <p class="mb-4">
+          We’d also love to hear from you if you’re working on a crypto- or blockchain-related project or company. Fair warning: we get a lot of these pitches. If you can manage a warm intro that helps us to qualify you quickly. If you can’t, just hold steady we’ll get back to you as fast as we possibly can. If you're interested in working at Forbes Capital, please see our careers page for job opportunities. For all other inquiries, please use the form below.
+        </p>
+      </div>
+    </div>
+    <!-- Right Section -->
+    <div class="w-full md:w-1/2 lg:w-1/2 xl:w-[420px] bg-stone-300 dark:bg-stone-800 justify-center rounded-md lg:p-6 mx-auto my-auto md:p-4 p-2 titillium-web-light">
+      <div class="mb-8">
+          <h3 class="font-bold titillium-web-semibold text-base mb-4 text-3xl md:text-4xl lg:text-4xl">MEDIA CONTACT</h3>
+          <div class="flex items-center mb-4">
+              <img class="w-16 h-16 rounded-full mr-4 filter grayscale" src="https://forbes-partners.com/wp-content/uploads/2022/04/kelly-fitzgerald-sm.jpg" alt="Author photo">
+              <div>
+                  <strong class="block text-lg">Michelle Elena Robert</strong>
+                  <span class="text-gray-600">Partner, Head of Communications</span>
+                  <hr class="my-6 border-t border-stone-600 border-2 dark:border-stone-600">
+              </div>
+          </div>
+  
+          <!-- Social Links Section -->
+          <div class="flex space-x-4">
+              <a href="#" target="_blank" class="">
+                  <i class="fab fa-linkedin text-2xl"></i>
+              </a>
+              <a href="#" target="_blank" class="">
+                  <i class="fa-brands fa-x-twitter text-2xl"></i>
+              </a>
+              <a href="#" target="_blank" class="">
+                  <i class="fab fa-facebook text-2xl"></i>
+              </a>
+              <a href="mailto:michellerobert@forbespartners.org" class="">
+                  <i class="fas fa-envelope text-2xl"></i>
+              </a>
+          </div>
+      </div>
+  </div>
+    </div>
+    <!-- Contact Form -->
+    <div class="w-full titillium-web-semibold">
+      <form class="space-y-6" enctype="multipart/form-data"   method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="form-name" value="Main Contact Form">
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="firstName">
+              First Name*
+            </label>
+            <input class="appearance-none block w-full bg-stone-300 dark:bg-stone-800 text-gray-700 border-2 border-stone-600   py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-base" type="text" name="first_name" id="firstName" aria-invalid="false">
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="lastName">
+              Last Name*
+            </label>
+            <input class="appearance-none block w-full bg-stone-300 dark:bg-stone-800 text-gray-700 border-2 border-stone-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-base" type="text" name="last_name" id="lastName" aria-invalid="false">
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+              Email*
+            </label>
+            <input class="appearance-none block w-full bg-stone-300 dark:bg-stone-800 text-gray-700 border-2 border-stone-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-base" type="email" name="email_address" id="email" aria-invalid="false">
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="companyName">
+              Phone Number*
+            </label>
+            <input class="appearance-none block w-full bg-stone-300 dark:bg-stone-800 text-gray-700 border-2 border-stone-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-base" type="number" name="phone" id="companyName" aria-invalid="false">
+          </div>
+        </div>
+        
+        
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
+              Message*
+            </label>
+            <textarea class="appearance-none block w-full bg-stone-300 dark:bg-stone-800 text-gray-700 border-2 border-stone-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-base" name="message" id="message" rows="6"></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="text-gray-800 hover:text-white dark:bg-stone-800 hover:bg-orange-600  border-2 border-stone-600 dark:text-white font-bold py-2 px-4 rounded-md  focus:outline-none focus:shadow-outline" type="submit">
+            <i class="fa-regular fa-envelope"></i>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div><br>
+  <div class="sm:text-sm md:text-sm lg:text-sm">
+    <p class="mb-2 titillium-web-extralight-italic">
+     <b class="titillium-web-semibold">Disclosure:</b> Any investments or portfolio companies mentioned, referred to, or described on this page are not representative of all investments in vehicles managed by Forbes Capital and there can be no assurance that the investments will be profitable or that other investments made in the future will have similar characteristics or results. Exits include (1) current and former Forbes Capital portfolio companies which may have been acquired and/or (2) where Forbes Capital sold tokens and/or equity. Certain portfolio companies on this list may still be held in Forbes Capital funds. A list of investments made by funds managed by Forbes Capital is available here: <span class="text-base">https://forbespartners.org/main/portfolio/</span>. Excluded from this list are investments that have not yet been announced (1) for strategic reasons (e.g., undisclosed positions in publicly traded digital assets) or (2) due to coordination with the development team or issuer on the timing and nature of public disclosure. Further, the list of investments is updated monthly and, as such, may not reflect the most recent Forbes Capital investments. Past results of Forbes Capital’s investments, pooled investment vehicles, or investment strategies are not necessarily indicative of future results.</p>
+    
+    <div>
+</section>
+
+
+{% endblock %}

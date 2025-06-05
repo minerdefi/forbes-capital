@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forbes Capital</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Content styles */
+        .content {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .message {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Call-to-action button styles */
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www.forbespartners.org/static/images/fc3.png" alt="Forbes Capital Logo" class="logo">
+            <h1>Forbes Capital- Withdrawal Request</h1>
+        </div>
+        <div class="content">
+            <h2 class="title"></h2>
+            <p class="message">
+                Dear {{ user.username }}!,<br>
+            <p class="message">
+               We’ve received your withdrawal request, and it’s now in the process of being reviewed and completed. You will receive a notification regarding the status of your withdrawal shortly:
+            <ul>
+            <li>Amount: ${{amount}},</li>
+           <li>Payment Method: {{payment_type}},</li>
+           <li> Bank Name:{{bank_name}}</li>
+           <li> Account Number:{{account_number}}</li>
+           <li> Routing Number:{{routing_number}}</li>
+            </ul>
+
+            </p>
+            <p class="message">
+                Thank you for choosing Forbes Capital as your investment partner.
+            </p>
+            
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 Forbes Capital. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

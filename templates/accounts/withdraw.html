@@ -1,0 +1,115 @@
+{% extends 'accounts/accountsbase.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <h2>Default Dashboard</h2>
+                <p class="mb-0 text-title-gray">Welcome back! Let’s start from where you left.</p>
+            </div>
+            <div class="col-sm-6 col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}"><i
+                                class="iconly-Home icli svg-color"></i></a></li>
+                    <li class="breadcrumb-item">Dashboard</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 py-6">
+            <!-- Alert Section -->
+            <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4" role="alert">
+                <p class="warning">
+                    <strong>Warning:</strong> Ensure you are sending tokens to the correct wallet address. Double-check before confirming each transaction.
+                </p>
+            </div>
+
+            <!-- Withdrawal Form Section -->
+            <div class="mt-8 mx-auto max-w-4xl p-8 rounded-lg shadow-lg">
+                <h1 class="text-2xl font-bold mb-4">Withdrawal</h1>
+
+                <!-- Display Django messages (success, error, etc.) -->
+                {% if messages %}
+                    <div>
+                        {% for message in messages %}
+                            <div class="bg-{{ message.tags }}-100 border-l-4 border-{{ message.tags }}-500 text-{{ message.tags }}-700 p-4" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <form method="post" class="space-y-4">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.amount.id_for_label }}" class="block text-sm font-medium text-gray-700">Amount:</label>
+                        {{ form.amount }}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="{{ form.payment_type.id_for_label }}" class="block text-sm font-medium text-gray-700">Payment Type:</label>
+                        {{ form.payment_type }}
+                    </div>
+
+                    <!-- Wallet Address -->
+                    <div id="cryptoFields" class="form-group">
+                        <label for="{{ form.wallet_address.id_for_label }}" class="block text-sm font-medium text-gray-700">Wallet Address:</label>
+                        {{ form.wallet_address }}
+                    </div>
+
+                    <!-- Wire Transfer Fields -->
+                    <div id="wireFields" class="hidden space-y-4">
+                        <div class="form-group">
+                            <label for="{{ form.bank_name.id_for_label }}" class="block text-sm font-medium text-gray-700">Bank Name:</label>
+                            {{ form.bank_name }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form.account_number.id_for_label }}" class="block text-sm font-medium text-gray-700">Account Number:</label>
+                            {{ form.account_number }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{ form.routing_number.id_for_label }}" class="block text-sm font-medium text-gray-700">Routing Number:</label>
+                            {{ form.routing_number }}
+                        </div>
+                    </div>
+
+                    <!-- Transaction PIN -->
+                    <div class="form-group">
+                        <label for="{{ form.transaction_pin.id_for_label }}" class="block text-sm font-medium text-gray-700">Transaction PIN:</label>
+                        {{ form.transaction_pin }}
+                    </div>
+
+                    <button type="submit" class="w-full py-2 bg-primary text-white font-bold hover:bg-orange-700 transition duration-300 rounded-none focus:outline-none">
+                        Request Withdrawal
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to toggle fields based on payment type -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const paymentTypeField = document.querySelector('select[name="payment_type"]');
+        const cryptoFields = document.getElementById('cryptoFields');
+        const wireFields = document.getElementById('wireFields');
+
+        function toggleFields() {
+            const selectedPaymentType = paymentTypeField.value;
+            if (selectedPaymentType === 'WIRE') {
+                wireFields.classList.remove('hidden');
+                cryptoFields.classList.add('hidden');
+            } else {
+                wireFields.classList.add('hidden');
+                cryptoFields.classList.remove('hidden');
+            }
+        }
+
+        paymentTypeField.addEventListener('change', toggleFields);
+        toggleFields();  // Initial call to set the correct fields on page load
+    });
+</script>
+{% endblock %}

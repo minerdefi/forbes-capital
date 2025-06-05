@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forbes Capital</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Content styles */
+        .content {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .message {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Call-to-action button styles */
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ea580c;
+            color: #ffffff;
+            text-decoration: none;
+            border: 0px;
+        }
+
+        /* Footer styles */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www.forbespartners.org/static/images/fc3.png" alt="Forbes Capital Logo" class="logo">
+            <h1>Forbes Capital- Account Activation</h1>
+        </div>
+        <div class="content">
+            <h2 class="title"></h2>
+            <p class="message">
+                Dear {{ username }}!,<br>
+            <p class="message">
+              To confirm your registration, visit the following link:
+              <a href="{{ protocol }}://{{ domain }}{% url 'activate' uid token %}" class="cta-button btn-success">Activate Account</a>
+              
+            </p>
+            <p class="message">
+                Thank you for choosing Forbes Capital as your investment partner.
+            </p><br>
+           
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Forbes Capital. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

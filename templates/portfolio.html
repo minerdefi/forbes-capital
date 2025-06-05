@@ -1,0 +1,643 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}FC | Portfolio {% endblock %}
+{% block content %}
+
+<section class="mx-auto md:w-11/12 lg:w-11/12 p-2">
+    <div class="container mx-auto px-4">
+        <div class="rounded-lg lg:p-6 md:p-4 p-2 mb-8 md:mb-0 titillium-web-light text-lg md:text-xl lg:text-xl">
+            <h2 id="our-portfolio" class="text-4xl lg:text-5xl font-bold mb-6 dm-serif-text-regular">Our Portfolio</h2>
+            <p class="text-gray-700 dark:text-gray-300 mb-6">
+                In addition to managing a portfolio of liquid crypto assets, we invest in both private equity and tokens
+                for projects that have not yet launched. We invest from the seed stage and plan to support entrepreneurs
+                over multiple rounds of investment in both private and public markets. We invest in technical endeavors
+                that push the boundaries of computer science and technology, infrastructure that supports trust-minimized
+                computation at a global scale, and consumer and enterprise applications that require trust-minimized
+                properties.
+            </p>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full border-2 border-gray-300">
+                    <tbody>
+                        <!-- Project 1 -->
+                        <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/2vdCtyaIo0BHtxTSWtLBJ8/e3728024835c032b55293224d0be92e4/01-logo.jpeg" alt="01 Logo" class="ml-4 h-12">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                    01 is a fully decentralized derivatives exchange. 01 runs on smart contracts built on the Solana blockchain.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/01_exchange" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://01.xyz/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                    01 is a fully decentralized derivatives exchange. 01 runs on smart contracts built on the Solana blockchain.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 2 -->
+                        <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/6dlQAquyk5641OAOAjTFKF/73b4d464d9505b41c16bd56bf76f6a74/alethea.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                    Alethea AI is an artificial intelligence company that is enhancing how AI and humans interact using iNFTs, intelligent NFTs that are embedded with AI personalities.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/real_alethea" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://alethea.ai/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                    Alethea AI is an artificial intelligence company that is enhancing how AI and humans interact using iNFTs, intelligent NFTs that are embedded with AI personalities.
+                                </p>
+                            </td>
+                        </tr>
+
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/26uj7bvHQqK0zrlfeoX9Bc/96845a26afc21bab9398d939f30cb3bc/algorand.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                    Algorand, Inc. is a technology company founded by cryptography pioneer, Turing award winner and MIT professor, Silvio Micali. Algorand is the first blockchain to provide immediate transaction finality. No forking. No uncertainty. It’s transaction throughput is also on par with large payment and financial networks
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/Algorand" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.algorand.com/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                    Algorand, Inc. is a technology company founded by cryptography pioneer, Turing award winner and MIT professor, Silvio Micali. Algorand is the first blockchain to provide immediate transaction finality. No forking. No uncertainty. It’s transaction throughput is also on par with large payment and financial networks
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 2 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/4kfY65GY8Cq5pu6qNlOrFb/e64532b73443f77efb60c6329ef95044/Arch_network.jpeg" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Arch unlocks bridgeless decentralized finance (DeFi) on the world's largest blockchain, Bitcoin.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://x.com/ArchNtwrk" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.arch.network/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Arch unlocks bridgeless decentralized finance (DeFi) on the world's largest blockchain, Bitcoin.
+                                </p>
+                            </td>
+                        </tr>
+
+                         <!-- Project 2 -->
+                          <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/4q1e2BChI7tJdBl9D37GGk/f7985830affcfdd9505d5af9698414e9/Babel_Finance.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Babel Finance provides professional crypto asset financial services for high net worth individual investors and institutional investors, including crypto asset deposits and loans, asset management, brokerage trading, and derivatives strategies, mining pools, mining farms, and mining financial services.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/BabelFinance" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://babel.finance/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Babel Finance provides professional crypto asset financial services for high net worth individual investors and institutional investors, including crypto asset deposits and loans, asset management, brokerage trading, and derivatives strategies, mining pools, mining farms, and mining financial services.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 2 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/cs4YTiHY2ZA2h3FZMYkQl/aa53cd531e96a0494b142e0c671de2e0/Strata_logo.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  Strata Protocol is an open-source protocol to launch tokens around a person, project, idea, or collective on Solana.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/StrataProtocol" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://strataprotocol.com/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  Strata Protocol is an open-source protocol to launch tokens around a person, project, idea, or collective on Solana.
+                                </p>
+                            </td>
+                        </tr>
+                         <!-- Project 2 -->
+                          <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/12I4EkcIleCDyzsP3nQ1fv/daca1a8de5aeb8872443b4e2ee2f9101/breeze.jpeg" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Breeze helps businesses accept and manage crypto payments. Breeze is bringing their experience of building payments infrastructure at Stripe to help innovative companies grow and thrive in web3.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="#" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://breeze.cash/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Breeze helps businesses accept and manage crypto payments. Breeze is bringing their experience of building payments infrastructure at Stripe to help innovative companies grow and thrive in web3.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 2 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/5drZqQmVYFHLKKEtjMVI6Z/f09615a88e3b7061b9dfd63313af6575/cabin.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   CabinDAO is an online and IRL community using blockchain technology to help creators make a living online.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/creatorcabins/" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.creatorcabins.com/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   CabinDAO is an online and IRL community using blockchain technology to help creators make a living online.
+                                </p>
+                            </td>
+                        </tr>
+                        <!-- Project 2 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/bZhFHmPwvqqPjCiVHNHLN/bc734575bfd9e2d008b3c81b9b14b8c2/Coral_Logo.svg" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Coral is the technology company developing Anchor, a development framework, Backpack, and the xNFT protocol on Solana.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/0xCoral" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.coral.community/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Coral is the technology company developing Anchor, a development framework, Backpack, and the xNFT protocol on Solana.
+                                </p>
+                            </td>
+                        </tr>
+                        <!-- Project 3 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/5wFX964H9Zu2asCuPZR6XE/e56c717c5f6fc58e6e5892af1c53bed8/cyberconnect.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  CyberConnect is a decentralized social graph protocol built with IPFS and Ceramic that connects everyone on Web3 in contextually meaningful ways.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/CyberConnectHQ" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://cyberconnect.me/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  CyberConnect is a decentralized social graph protocol built with IPFS and Ceramic that connects everyone on Web3 in contextually meaningful ways.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 4 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/1g8adPb6NDmvxcMI2FZEfG/eb16079186ab0c04bd7e709eca44eb33/DabbaLogo_500x500px_black_transparent_bg.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Dabba is a public wifi network operator in India. Founded in 2017, Dabba has deployed thousands of hotspots across India at retail, residential and commercial locations aiming to provide users with fast, cheap internet.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/WifiDabba" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://dabba.com/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Dabba is a public wifi network operator in India. Founded in 2017, Dabba has deployed thousands of hotspots across India at retail, residential and commercial locations aiming to provide users with fast, cheap internet.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 5 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/373xu9b0Iu30nTfoYIwLXc/93a98414786f9096c5a5a5ddb8e00a4c/DAOexchange_logo.jpg" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  DAOexchange is the all-in-one tool for managing and growing your web3 community. Commune seeks to be an all-in-one web3 Community Relationship Management platform for discord-based web 3 communities enabling participants to understand, engage, grow, manage, and operate their web3 community.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/daoex_app" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.daoex.app/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  DAOexchange is the all-in-one tool for managing and growing your web3 community. Commune seeks to be an all-in-one web3 Community Relationship Management platform for discord-based web 3 communities enabling participants to understand, engage, grow, manage, and operate their web3 community.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 6 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/2EsoD15YHKKqJdXYCZVpXB/98edf3f8c15f570e0eaa7fceeb77bb67/drift.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Drift is an on-chain, cross-margined perpetual swap exchange.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/driftprotocol" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.drift.trade/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Drift is an on-chain, cross-margined perpetual swap exchange.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 7 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/6ruiYNuSHlL4RuyHK29w0U/355aa6376f75f28909903aaccc3186d3/Ethereum_logo_translucent.svg.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Ethereum is a decentralized, open-source blockchain with smart contract functionality. It's a community-built technology behind the cryptocurrency ether (ETH) and thousands of applications you can use today.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/ethereum/" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://ethereum.org/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Ethereum is a decentralized, open-source blockchain with smart contract functionality. It's a community-built technology behind the cryptocurrency ether (ETH) and thousands of applications you can use today.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 8 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/7k1h10ALUaYgt1wjAiLm5C/bec1ae8c184f5f41f4b9591a992281fe/Fluidity_Logo.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Fluidity takes tokens and wraps them at a 1-to-1 ratio while storing the original asset in a lending protocol. The accruing interest is stored in a reward pool with any on-chain purchase being eligible for a portion of the pool. We take no fee and the user can win a life-changing amount just for practicing their normal spending habits.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/fluiditymoney" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.fluidity.money/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Fluidity takes tokens and wraps them at a 1-to-1 ratio while storing the original asset in a lending protocol. The accruing interest is stored in a reward pool with any on-chain purchase being eligible for a portion of the pool. We take no fee and the user can win a life-changing amount just for practicing their normal spending habits.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 9 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/3HNFTncerTnUySWP3Ur9BY/f76602494961ef4cca747f5872cbcea1/grape.webp" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Grape Network provides tools for DAOs to help them manage their communities more efficiently.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/grapeprotocol/" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://grapes.network/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Grape Network provides tools for DAOs to help them manage their communities more efficiently.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 10 -->
+                         <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/4y6HPm6rgJ8BrlBOcD7q9t/13cf6a7a2f73f270bddcf13342a7e6c2/Wormhole.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Wormhole is a decentralized interoperability protocol for multiple blockchain ecosystems with initial support for Solana, Terra, Ethereum and Binance Smart Chain.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://x.com/wormhole" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://wormhole.com/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Wormhole is a decentralized interoperability protocol for multiple blockchain ecosystems with initial support for Solana, Terra, Ethereum and Binance Smart Chain.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 11 -->
+                        <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/4BqOhz9b1JvzseiWfpvE15/adb05ed62e6d41e094928cfcb50d91fe/satellite.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Satellite.im is a multiplatform chat application built using modern, decentralized technologies with peer 2 peer workflows. Satellite.im seeks to provide end-to-end encryption without sacrificing quality.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/satellite_im/" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://satellite.im/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Satellite.im is a multiplatform chat application built using modern, decentralized technologies with peer 2 peer workflows. Satellite.im seeks to provide end-to-end encryption without sacrificing quality.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 12 -->
+                        <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/2fYrtc6eB8HhrdXjddlz99/ec1479823536e2eae238eb3048b8738c/solanaLogoMark.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world. Solana seeks to be the fastest blockchain in the world that supports DeFi, NFTs, Web3 and more.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/solana" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://solana.com/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   Solana is a decentralized blockchain built to enable scalable, user-friendly apps for the world. Solana seeks to be the fastest blockchain in the world that supports DeFi, NFTs, Web3 and more.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 13 -->
+                        <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/45VkFCNdv3gjureXHbBrLr/0d29d7133eb9aa3c045f252b05c8adc5/swivel.png" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  Swivel provides lenders the ability to lock in a fixed-yield or otherwise amplify their yields.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/swivelfinance/" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://swivel.finance/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                  Swivel provides lenders the ability to lock in a fixed-yield or otherwise amplify their yields.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 14 -->
+                        <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/2FNIxLr47Hm3EyMNRmlXTc/c70c2471aec6ad59f1e837ac9a47835e/tiplink_logo.jpeg" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   TipLink is a lightweight wallet designed to make transferring digital assets as easy as sending a link. Someone with crypto can create a TipLink and send that link to anyone over any platform (text, discord, email, etc).
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://twitter.com/TipLinkOfficial" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://tiplink.io/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   TipLink is a lightweight wallet designed to make transferring digital assets as easy as sending a link. Someone with crypto can create a TipLink and send that link to anyone over any platform (text, discord, email, etc).
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Project 15 -->
+                        <tr class="cursor-pointer hover:shadow-lg dark:hover:shadow-xl border-t border-b border-gray-300" onclick="toggleDetails(this)">
+                            <td class="px-8 py-6">
+                                <div class="flex items-center">
+                                    <img src="//images.ctfassets.net/qtbqvna1l0yq/4mfO0rO1Ux7Yq4w2EKqJ8Y/63e3d45aabd7a7116dfa9dbab8b6988f/zkme_logo.webp" alt="Alethea AI Logo" class="ml-4 h-10">
+                                </div>
+                            </td>
+                            <td class="px-8 py-6 hidden md:table-cell">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   zkMe builds Identity Oracles that leverage the power of zero-knowledge-proofs to enable secure, self-sovereign and private credential verifications.
+                                </p>
+                            </td>
+                            <td class="px-8 py-6">
+                                <div class="flex space-x-4">
+                                    <a href="https://x.com/zkme_" target="_blank" class="hover:text-base"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://zk.me/" target="_blank" class="hover:text-base">Website</a>
+                                </div>
+                            </td>
+                        </tr>
+                         <tr class="md:hidden border-t border-b border-gray-300">
+                            <td colspan="3" class="px-8 py-6 hidden">
+                                <p class="text-lg text-gray-700 dark:text-gray-300">
+                                   zkMe builds Identity Oracles that leverage the power of zero-knowledge-proofs to enable secure, self-sovereign and private credential verifications.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Add more projects following the same structure -->
+                    </tbody>
+                </table><br>
+
+                <div class="sm:text-sm md:text-sm lg:text-sm ">
+                    <p class="mb-2 titillium-web-extralight-italic">
+                     <b class="titillium-web-semibold">Disclosure:</b> Any investments or portfolio companies mentioned, referred to, or described on this page are not representative of all investments in vehicles managed by Forbes Capital and there can be no assurance that the investments will be profitable or that other investments made in the future will have similar characteristics or results. Exits include (1) current and former Forbes Capital portfolio companies which may have been acquired and/or (2) where Forbes Capital sold tokens and/or equity. Certain portfolio companies on this list may still be held in Forbes Capital funds. A list of investments made by funds managed by Forbes Capital is available here: <span class="text-base">https://forbespartners.org/main/portfolio/</span>. Excluded from this list are investments that have not yet been announced (1) for strategic reasons (e.g., undisclosed positions in publicly traded digital assets) or (2) due to coordination with the development team or issuer on the timing and nature of public disclosure. Further, the list of investments is updated monthly and, as such, may not reflect the most recent Forbes Capital investments. Past results of Forbes Capital’s investments, pooled investment vehicles, or investment strategies are not necessarily indicative of future results.</p>
+                    
+                <div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<script>
+    function toggleDetails(row) {
+        const nextRow = row.nextElementSibling;
+        if (nextRow && nextRow.classList.contains('md:hidden')) {
+            const detailCell = nextRow.querySelector('td');
+            detailCell.classList.toggle('hidden');
+        }
+    }
+</script>
+
+  
+
+  
+  
+  
+
+{% endblock %}

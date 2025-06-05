@@ -1,0 +1,243 @@
+{% extends 'accounts/accountsbase.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <h2>Dashboard</h2>
+                <p class="mb-0 text-title-gray">Welcome back! Let’s start from where you left.</p>
+            </div>
+            <div class="col-sm-6 col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="iconly-Home icli svg-color"></i></a></li>
+                    <li class="breadcrumb-item">Dashboard</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid default-dashboard">
+        <div class="row">
+            <!-- Welcome Banner Card -->
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                <div class="card welcome-banner">
+                   
+                    <div class="card-body">
+                        <div class="d-flex align-center">
+                            <h1>Hello, {{ profile.user.first_name }}<img src="{% static 'admin/assets/images/dashboard-1/hand.png' %}" alt="" /></h1>
+                        </div>
+                        <p id="balance-display" class="text-2xl  h4 ">Balance: <strong>*****</strong></p>
+                        <div class="d-flex align-center justify-content-between">
+                            <button class="btn btn-pill btn-primary txt" onclick="toggleBalance()">Show Balance</button>
+                        </div>
+                    </div>
+                    <script>
+                        function toggleBalance() {
+                            var balanceDisplay = document.getElementById('balance-display');
+                            var button = document.querySelector('.txt');
+                            if (balanceDisplay.textContent.includes('*****')) {
+                                balanceDisplay.innerHTML = `Balance: <strong>${{ profile.balance }}</strong>`;
+                                button.textContent = 'Hide Balance';
+                            } else {
+                                balanceDisplay.innerHTML = 'Balance: <strong>*****</strong>';
+                                button.textContent = 'Show Balance';
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+
+
+<div class="col-xl-8 col-lg-6 col-md-6 mb-4 mx-auto">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-center">
+        <!-- First row of icons -->
+        <div class="text-center hover:shadow-lg p-3 sm:p-4 bg-primary rounded-lg">
+           <i class="fas fa-coins text-lg sm:text-xl mb-2 text-white"></i>
+            <p class="font-small text-xs sm:text-base text-white">Deposits</p>
+            <p class="h5 sm:h4 text-white">${{ profile.deposit|default:0 }}</p>
+        </div>
+        <div class="text-center hover:shadow-lg p-3 sm:p-4 bg-primary  rounded-lg">
+            <i class="fas fa-dollar-sign text-lg sm:text-xl mb-2 text-white"></i>
+            <p class="font-medium text-xs sm:text-base text-white">Earnings</p>
+            <p class="h5 sm:h4 text-white">${{ total_earnings|default:0 }}</p>
+        </div>
+        <div class="text-center hover:shadow-lg p-3 sm:p-4 bg-primary  rounded-lg">
+            <i class="fas fa-dot-circle text-2xl sm:text-3xl mb-2 text-white"></i>
+            <p class="font-small text-xs sm:text-base text-white">ADA</p>
+            <p class="h5 sm:h4 text-white">${{ ada|default:0 }}</p>
+        </div>
+
+        <!-- Second row of icons -->
+        <div class="text-center hover:shadow-lg p-3 sm:p-4 bg-primary rounded-lg">
+            <i class="fas fa-money-bill-wave text-lg sm:text-xl mb-2 text-white"></i>
+            <p class="font-small text-xs sm:text-base text-white">Withdrawals</p>
+            <p class="h5 sm:h4 text-white">${{ total_withdrawals|default:0 }}</p>
+        </div>
+        
+        <div class="text-center hover:shadow-lg p-3 sm:p-4 bg-primary rounded-lg">
+            <i class="fas fa-piggy-bank text-lg sm:text-xl mb-2 text-white"></i>
+            <p class="font-small text-xs sm:text-base text-white">Available Balance</p>
+            <p class="h5 sm:h4 text-white">${{availble_balance|default:0}}</p>
+        </div>
+        <div class="text-center hover:shadow-lg p-4 bg-primary  rounded-lg">
+            <i class="fas fa-file-invoice-dollar text-xl mb-2 text-white"></i>
+            <p class="font-small text-white">Tax Balance</p>
+            <p class="h5 sm:h4 text-white">${{Tax_balance|default:0}}</p>
+        </div>
+    </div>
+</div>
+
+            
+
+            
+
+            <!-- Pie Chart Section -->
+<!-- Pie Chart Section -->
+<div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Balance Distribution</h5>
+            <canvas id="myPieChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Get the data from the template context
+    const totalBalance = {{ total_balance|default:0 }};
+    const totalProfits = {{ total_earnings|default:0 }};
+    const totalDeposits = {{ total_deposits|default:0 }};
+    const totalWithdrawals = {{ total_withdrawals|default:0 }};
+    const Ada = {{ada|default:0}};
+    const taxBalance={{ Tax_balance|default:0}}
+    const AvailableBalance = {{availble_balance|default:0}}
+    
+    // Create the pie chart
+    const ctx = document.getElementById('myPieChart').getContext('2d');
+    const myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Earnings', 'Deposits', 'Withdrawals', 'ADA','Available Balance'], // Category names only
+            datasets: [{
+                label: 'Balance Distribution',
+                data: [totalProfits, totalDeposits, totalWithdrawals, Ada,AvailableBalance ],
+                backgroundColor: ['#008000','#8B8000', '#ff0000',  '#A020F0','#FF8C00'],
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                    align: 'center', // Align keys in the center
+                    labels: {
+                        boxWidth: 12,  // Set the width of the legend box (small square)
+                        boxHeight: 12, // Explicitly set the height to make it a square
+                        padding: 15   // Add padding between items
+                    },
+                    fullSize: true, // Ensure legend spans full width
+                },
+                datalabels: {
+                    formatter: (value, ctx) => {
+                        let total = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                        let percentage = (value / total * 100).toFixed(2) + '%';
+                        return `${percentage}`; // Shows percentage only
+                    },
+                    color: '#fff',  // White color for text inside the pie chart
+                    font: {
+                        weight: 'bold'
+                    }
+                }
+            },
+            layout: {
+                padding: {
+                    top: 0,
+                    bottom: 0
+                }
+            }
+        }
+    });
+</script>
+
+
+
+
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                <div class="card job-card">
+                    <div class="card-header pb-0 card-no-border">
+                        <h3>Recent History</h3>
+                    </div>
+                    <div class="card-body pt-2">
+                        <div class="table-responsive theme-scrollbar">
+                            <table class="table display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Type</th>
+                                        <th>Amount</th>
+                                        <th class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for transaction in recent_transactions %}
+                                    <tr>
+                                        <td>{{ transaction.timestamp|date:"Y-m-d H:i" }}</td>
+                                        <td>{{ transaction.transaction_type|capfirst }}</td>
+                                        <td>${{ transaction.amount }}</td>
+                                        <td>
+                                            {% if transaction.confirmed %}
+                                            <div class="btn bg-light-success border-light-success text-success">Completed</div>
+                                            {% else %}
+                                            <div class="btn bg-light-warning border-light-success text-success">Pending</div>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    {% empty %}
+                                    <tr>
+                                        <td colspan="4" class="text-center">No Transactions</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profit Log Section -->
+            <div class="col-xl-4 col-lg-6 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header card-no-border pb-0">
+                        <h3>Earnings log</h3>
+                    </div>
+                    <div class="card-body audit-log">
+                        <ul>
+                            {% for earnings in earnings_logs %}
+                            <li class="d-flex align-items-center gap-2">
+                                <div class="flex-shrink-0 bg-success">
+                                    <img src="{% static 'admin/assets/images/dashboard-1/icon/checked.png' %}" alt="" />
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6>Details: {{ earnings.details }}</h6>
+                                    <p>${{ earnings.amount }}</p>
+                                </div>
+                                <span>{{ earnings.timestamp|date:"Y-m-d H:i" }}</span>
+                            </li>
+                            {% empty %}
+                            <li>No Earnings logs available.</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
