@@ -1,1 +1,1 @@
-web: gunicorn fc.wsgi:application
+web: gunicorn fc.wsgi:application --host 0.0.0.0 --port $PORT
